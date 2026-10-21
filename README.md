@@ -1,0 +1,2 @@
+# cjwhitedev.com
+My personal portfolio built with React and Typescript on Next.js
