@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans, Lora } from "next/font/google";
-import "./toolbox/main.css";
+import "./toolbox/_main.css";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
