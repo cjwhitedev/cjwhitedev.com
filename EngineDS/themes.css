@@ -1,10 +1,10 @@
 .t-light {
-    background-color: var(--bg);
-    color: var(--fg);
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 .t-dark {
-    background-color: var(--fg);
-    color: var(--bg);
-    --primary: var(--orange);
+  background-color: var(--fg);
+  color: var(--bg);
+  --primary: var(--orange);
 }

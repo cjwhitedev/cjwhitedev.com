@@ -5,11 +5,11 @@ import "@/EngineDS/_main.css";
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
-})
+});
 const lora = Lora({
   variable: "--font-lora",
   subsets: ["latin"],
-})
+});
 
 export const metadata: Metadata = {
   title: "CJ White",
