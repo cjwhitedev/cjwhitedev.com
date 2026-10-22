@@ -1,0 +1,15 @@
+/* [project]/EngineDS/vars.css [app-client] (css) */
+:root {
+  --beige: #f6e1c3;
+  --orange: #e9a178;
+  --maroon: #a84448;
+  --purple: #7a3e65;
+  --bg: color-mix(in srgb, var(--beige) 50%, white);
+  --fg: color-mix(in srgb, var(--purple) 40%, black);
+  --primary: var(--purple);
+  --secondary: var(--maroon);
+  --tertiary: var(--orange);
+  --quaternary: var(--beige);
+}
+
+/*# sourceMappingURL=EngineDS_vars_css_1igg3k2-ikub5._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Engine/vars.css"],"sourcesContent":["/* colors */\n:root {\n    --beige: #F6E1C3;\n    --orange: #E9A178;\n    --maroon: #A84448;\n    --purple: #7A3E65;\n\n    --bg: color-mix(in srgb, var(--beige) 50%, white);\n    --fg: color-mix(in srgb, var(--purple) 40%, black);\n    /* --fg: black; */\n\n    --primary:var(--purple);\n    --secondary: var(--maroon);\n    --tertiary: var(--orange);\n    --quaternary: var(--beige);\n}\n\n/* @media (prefers-color-scheme: dark) {\n  :root {\n      --bg: color-mix(in srgb, var(--purple) 50%, black);\n      --fg: color-mix(in srgb, var(--beige) 50%, white);\n  }\n} */"],"names":[],"mappings":"AACA"}}]
+}
