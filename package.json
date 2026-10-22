@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "16.4.2",
@@ -31,11 +32,17 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "eslint-plugin-storybook": "^10.6.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "playwright": "latest",
     "prettier": "3.9.10",
     "storybook": "^10.6.3",
     "typescript": "^5",
     "vite": "latest",
     "vitest": "^4"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

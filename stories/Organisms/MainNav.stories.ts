@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { MainNav } from "@/EngineDS/Organisms/MainNav/MainNav";
 
 const meta = {
-  title: "EngineDS/Organisms/MainNav",
+  title: "Engine DS/Organisms/MainNav",
   component: MainNav,
   tags: ["autodocs"],
   parameters: {
