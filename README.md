@@ -2,8 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## CJ's TODO
 
-[ ] set up vite test
-[ ] get buttons running
+- [ ] set up vite test
+- [ ] get buttons running
 
 ## Getting Started
 

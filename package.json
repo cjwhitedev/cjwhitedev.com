@@ -9,7 +9,7 @@
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "16.4.2",
@@ -42,7 +42,10 @@
     "vitest": "^4"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --cache --fix",
-    "*.{js,css,md, ts, tsx}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md,mdx}": "prettier --write"
   }
 }
