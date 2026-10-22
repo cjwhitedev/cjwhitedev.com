@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/EngineDS/themes.css"],"sourcesContent":[".t-light {\n    background-color: var(--bg);\n    color: var(--fg);\n}\n\n.t-dark {\n    background-color: var(--fg);\n    color: var(--bg);\n    --primary: var(--orange);\n}"],"names":[],"mappings":"AAAA;;;;;AAKA"}}]
-}
