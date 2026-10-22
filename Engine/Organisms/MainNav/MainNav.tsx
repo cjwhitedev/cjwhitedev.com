@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import './style.css'
+import './mainnav.css'
 
-export default function Nav() {
+export const MainNav = () => {
   return (
     <header className='t-dark'>
       <div className="wrapper">
@@ -14,6 +14,7 @@ export default function Nav() {
                   width={195}
                   height={45}
                   alt="CJ White DEV"
+                  loading="eager"
                 />
             </Link>
           </div>

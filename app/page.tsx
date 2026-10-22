@@ -1,9 +1,9 @@
-import Nav from "./toolbox/main-nav/main-nav"
+import {MainNav} from "@/EngineDS/Organisms/MainNav/MainNav"
 // import Image from "next/image";
 // import styles from "./page.module.css";
 
 export default function Home() {
   return (
-   <Nav />
+   <MainNav />
   );
 }

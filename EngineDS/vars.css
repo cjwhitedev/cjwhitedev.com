@@ -1,0 +1,23 @@
+/* colors */
+:root {
+    --beige: #F6E1C3;
+    --orange: #E9A178;
+    --maroon: #A84448;
+    --purple: #7A3E65;
+
+    --bg: color-mix(in srgb, var(--beige) 50%, white);
+    --fg: color-mix(in srgb, var(--purple) 40%, black);
+    /* --fg: black; */
+
+    --primary:var(--purple);
+    --secondary: var(--maroon);
+    --tertiary: var(--orange);
+    --quaternary: var(--beige);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+      --bg: color-mix(in srgb, var(--purple) 50%, black);
+      --fg: color-mix(in srgb, var(--beige) 50%, white);
+  }
+} */
