@@ -4,5 +4,5 @@ node_modules
 storybook-static
 
 .next
-
 .eslintcache
+tsconfig.tsbuildinfo

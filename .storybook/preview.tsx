@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/nextjs-vite";
+import type { IndexEntry } from "storybook/internal/types";
 
 import "@/EngineDS/main.css";
 
@@ -20,7 +21,7 @@ const preview: Preview = {
 
     options: {
       // The `a` and `b` arguments in this function have a type of `import('storybook/internal/types').IndexEntry`. Remember that the function is executed in a JavaScript environment, so use JSDoc for IntelliSense to introspect it.
-      storySort: (a, b) => {
+      storySort: (a: IndexEntry, b: IndexEntry) => {
         const aIsFoundation = a.id.startsWith("engine-ds-foundations-");
         const bIsFoundation = b.id.startsWith("engine-ds-foundations-");
 
