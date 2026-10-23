@@ -1,5 +1,5 @@
 import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
-import Image from "next/image";
+import { Logo } from "@/EngineDS/Atoms/Logo/Logo";
 import "./header.css";
 
 export const Header = () => {
@@ -8,14 +8,8 @@ export const Header = () => {
       <div className="wrapper">
         <div className="container">
           <div className="main-nav-logo">
-            <Anchor href={`/`}>
-              <Image
-                src="/media/logo-light.svg"
-                width={195}
-                height={45}
-                alt="CJ White DEV"
-                loading="eager"
-              />
+            <Anchor href={`/`} aria-label="CJ White DEV home">
+              <Logo aria-hidden="true" focusable="false" />
             </Anchor>
           </div>
           <div className="main-container">
