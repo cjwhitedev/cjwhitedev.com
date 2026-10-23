@@ -1,0 +1,9 @@
+@import "../EngineDS/_vars.css";
+
+body.sb-main-fullscreen {
+  background-color: #fff;
+}
+
+.docs-story {
+  background-color: var(--bg);
+}

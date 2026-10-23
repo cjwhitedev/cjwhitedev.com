@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/nextjs-vite";
-import type { IndexEntry } from "storybook/internal/types";
 
 import "@/EngineDS/main.css";
+import "./preview.css";
 
 const preview: Preview = {
   parameters: {
@@ -20,16 +20,22 @@ const preview: Preview = {
     },
 
     options: {
-      // The `a` and `b` arguments in this function have a type of `import('storybook/internal/types').IndexEntry`. Remember that the function is executed in a JavaScript environment, so use JSDoc for IntelliSense to introspect it.
-      storySort: (a: IndexEntry, b: IndexEntry) => {
-        const aIsFoundation = a.id.startsWith("engine-ds-foundations-");
-        const bIsFoundation = b.id.startsWith("engine-ds-foundations-");
-
-        if (aIsFoundation !== bIsFoundation) {
-          return aIsFoundation ? -1 : 1;
-        }
-
-        return a.id.localeCompare(b.id, undefined, { numeric: true });
+      storySort: {
+        method: "alphabetical",
+        includeNames: true,
+        order: [
+          "Engine DS",
+          [
+            "Foundations",
+            ["*", ["Docs", "*"]],
+            "Atoms",
+            ["*", ["Docs", "*"]],
+            "Molecules",
+            ["*", ["Docs", "*"]],
+            "Organisms",
+            ["*", ["Docs", "*"]],
+          ],
+        ],
       },
     },
   },

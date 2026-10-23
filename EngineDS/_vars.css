@@ -5,14 +5,13 @@
   --maroon: #a84448;
   --purple: #7a3e65;
 
+  --near-black: color-mix(in srgb, var(--purple) 40%, black);
+
   --bg: color-mix(in srgb, var(--beige) 50%, white);
-  --fg: color-mix(in srgb, var(--purple) 40%, black);
-  /* --fg: black; */
+  --fg: varr(--near-black);
 
   --primary: var(--purple);
-  --secondary: var(--maroon);
-  --tertiary: var(--orange);
-  --quaternary: var(--beige);
+  --secondary: var(--orange);
 }
 
 /* @media (prefers-color-scheme: dark) {

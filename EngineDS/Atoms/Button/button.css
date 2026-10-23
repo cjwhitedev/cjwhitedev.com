@@ -1,21 +1,43 @@
-.engine-btn {
+.engine-button {
   display: inline-block;
   cursor: pointer;
   border: 0;
   border-radius: 1rem 1rem 0.25rem 1rem;
   padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
   color: var(--bg);
 }
 
-.engine-btn--primary {
+.engine-button--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.engine-button--large {
+  padding: 1.5rem 3rem;
+  font-size: 1.25rem;
+}
+
+.engine-button--primary {
   background-color: var(--primary);
 }
 
-.engine-btn--secondary {
+.engine-button--secondary {
   background-color: var(--secondary);
+  color: var(--near-black);
 }
 
-.egine-btn--tertiary {
-  background-color: var(--bg);
-  border: 1px solid var(--primary);
+.engine-button--tertiary {
+  background-color: inherit;
+  color: var(--primary);
+
+  outline: 3px solid var(--primary);
+  outline-offset: -3px;
+
+  &.engine-button--small {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+  }
 }
