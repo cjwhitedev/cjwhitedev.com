@@ -49,9 +49,3 @@ a {
     }
   }
 }
-
-button {
-  border: 0;
-  background-color: var(--primary);
-  border-radius: 10px;
-}
