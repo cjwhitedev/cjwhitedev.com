@@ -5,9 +5,8 @@ import { Button } from "@/EngineDS/Atoms/Button/Button";
 const meta = {
   title: "Engine DS/Atoms/Button",
   component: Button,
-  tags: ["autodocs"],
   parameters: {
-    layout: "fullscreen",
+    layout: "centered",
   },
 } satisfies Meta<typeof Button>;
 

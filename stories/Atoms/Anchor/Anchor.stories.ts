@@ -5,7 +5,6 @@ import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 const meta = {
   title: "Engine DS/Atoms/Anchor",
   component: Anchor,
-  tags: ["autodocs"],
   parameters: {
     layout: "centered",
   },

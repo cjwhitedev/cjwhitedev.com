@@ -5,7 +5,6 @@ import { Footer } from "@/EngineDS/Organisms/Footer/Footer";
 const meta = {
   title: "Engine DS/Organisms/Footer",
   component: Footer,
-  tags: ["autodocs"],
 } satisfies Meta<typeof Footer>;
 
 export default meta;

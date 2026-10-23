@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { Tabs } from "@/EngineDS/Organisms/Tabs/Tabs";
+import { Tooltip } from "@/EngineDS/Atoms/Tooltip/Tooltip";
 
 const meta = {
-  title: "Engine DS/Organisms/Tabs",
-  component: Tabs,
-  tags: ["autodocs"],
-} satisfies Meta<typeof Tabs>;
+  title: "Engine DS/Atoms/Tooltip",
+  component: Tooltip,
+} satisfies Meta<typeof Tooltip>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
