@@ -15,7 +15,7 @@ export default meta;
 // 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
 
-export const Simple: Story = {
+export const Default: Story = {
   args: {
     label: "So simple!",
     hierarchy: "primary",

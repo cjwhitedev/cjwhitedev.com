@@ -1,14 +1,14 @@
-import Link from "next/link";
+import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 import Image from "next/image";
-import "./mainnav.css";
+import "./header.css";
 
-export const MainNav = () => {
+export const Header = () => {
   return (
     <header className="t-dark">
       <div className="wrapper">
         <div className="container">
           <div className="main-nav-logo">
-            <Link href={`/`}>
+            <Anchor href={`/`}>
               <Image
                 src="/media/logo-light.svg"
                 width={195}
@@ -16,7 +16,7 @@ export const MainNav = () => {
                 alt="CJ White DEV"
                 loading="eager"
               />
-            </Link>
+            </Anchor>
           </div>
           <div className="main-container">
             <button className="nav-controller">
@@ -25,16 +25,16 @@ export const MainNav = () => {
             <div className="nav-container">
               <ul className="main-nav">
                 <li>
-                  <Link href={`/`}>portfolio</Link>
+                  <Anchor href={`/`}>portfolio</Anchor>
                 </li>
                 <li>
-                  <Link href={`/`}>github</Link>
+                  <Anchor href={`/`}>github</Anchor>
                 </li>
                 <li>
-                  <Link href={`/`}>resume</Link>
+                  <Anchor href={`/`}>resume</Anchor>
                 </li>
                 <li>
-                  <Link href={`/`}>contact</Link>
+                  <Anchor href={`/`}>contact</Anchor>
                 </li>
               </ul>
             </div>

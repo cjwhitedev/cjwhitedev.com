@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { MainNav } from "@/EngineDS/Organisms/MainNav/MainNav";
+import { Header } from "@/EngineDS/Organisms/Header/Header";
 
 const meta = {
-  title: "Engine DS/Organisms/MainNav",
-  component: MainNav,
+  title: "Engine DS/Organisms/Header",
+  component: Header,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof MainNav>;
+} satisfies Meta<typeof Header>;
 
 export default meta;
 // 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
 
 // 👇 A story named Primary that renders `<Button primary label="Button" />`
-export const Initial: Story = {};
+export const Default: Story = {};

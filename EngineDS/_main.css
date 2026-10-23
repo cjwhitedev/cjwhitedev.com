@@ -17,6 +17,58 @@ body {
   color: var(--fg);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-open-sans, "Trebuchet MS", sans-serif);
+  line-height: 1.2;
+  margin: 0 0 0.65em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p,
+li,
+blockquote {
+  line-height: 1.65;
+}
+
+p {
+  max-width: 65ch;
+  margin: 0 0 1em;
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding-inline-start: 1em;
+  border-inline-start: 3px solid var(--secondary);
+}
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -36,16 +88,4 @@ body {
 .container {
   width: 100%;
   max-width: 45rem;
-}
-
-a {
-  color: inherit;
-  text-decoration-color: var(--primary);
-  text-decoration-thickness: 0.12rem;
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      color: var(--primary);
-    }
-  }
 }

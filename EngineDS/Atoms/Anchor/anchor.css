@@ -1,0 +1,11 @@
+.engine-link {
+  color: inherit;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 0.12rem;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
