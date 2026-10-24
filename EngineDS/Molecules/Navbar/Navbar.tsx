@@ -1,0 +1,54 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import "./navbar.css";
+import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
+
+export interface NavbarProps {
+  links: { label: string; href: string }[];
+  theme?: "light" | "dark";
+}
+
+export const Navbar = ({ links, theme = "dark" }: NavbarProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const closeOnDesktop = () => {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", closeOnDesktop);
+    return () => window.removeEventListener("resize", closeOnDesktop);
+  }, []);
+
+  return (
+    <div
+      className={`engine-navbar engine-navbar__container engine--t-${theme}`}
+    >
+      <button
+        type="button"
+        className="engine-navbar__toggle"
+        aria-label="Toggle navigation"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        <span className="engine-navbar__toggle-bar"></span>
+        <span className="engine-navbar__toggle-bar"></span>
+        <span className="engine-navbar__toggle-bar"></span>
+      </button>
+      <nav
+        className={`engine-navbar__nav${isOpen ? " engine-navbar--open" : ""}`}
+      >
+        <ul className="engine-navbar__list">
+          {links.map((link) => (
+            <li key={link.href} className="engine-navbar__item">
+              <Anchor href={link.href}>{link.label}</Anchor>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};

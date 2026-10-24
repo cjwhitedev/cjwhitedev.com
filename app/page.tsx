@@ -3,5 +3,14 @@ import { Header } from "@/EngineDS/Organisms/Header/Header";
 // import styles from "./page.module.css";
 
 export default function Home() {
-  return <Header />;
+  return (
+    <Header
+      links={[
+        { label: "Portfolio", href: "/portfolio" },
+        { label: "GitHub", href: "/github" },
+        { label: "Resume", href: "/resume" },
+        { label: "Contact", href: "/contact" },
+      ]}
+    />
+  );
 }

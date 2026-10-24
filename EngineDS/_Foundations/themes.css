@@ -1,10 +1,17 @@
-.t-light {
+.engine--t-light {
   background-color: var(--bg);
   color: var(--fg);
+
+  --primary: var(--purple);
+  --secondary: var(--orange);
 }
 
-.t-dark {
-  background-color: var(--fg);
-  color: var(--bg);
+.engine--t-dark {
+  --fg: var(--near-white);
+  --bg: var(--near-black);
   --primary: var(--orange);
+  --secondary: var(--purple);
+
+  background-color: var(--bg);
+  color: var(--fg);
 }

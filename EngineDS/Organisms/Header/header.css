@@ -1,36 +1,18 @@
-header {
+.engine-header {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1000;
 
   .wrapper {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  .container {
+  .header-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
-  }
-
-  .nav-controller {
-    height: 45px;
-    width: 45px;
-    display: none;
-
-    /* & + ul {
-            display: none;
-        } */
-  }
-
-  .main-nav {
-    font-family: var(--font-open-sans);
-    font-weight: 700;
-    display: block;
-    margin: 0 0 0.5rem 0;
-    li {
-      display: inline-block;
-      margin: 0 1rem;
-    }
   }
 }

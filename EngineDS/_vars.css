@@ -6,9 +6,10 @@
   --purple: #7a3e65;
 
   --near-black: color-mix(in srgb, var(--purple) 40%, black);
+  --near-white: color-mix(in srgb, var(--beige) 50%, white);
 
-  --bg: color-mix(in srgb, var(--beige) 50%, white);
-  --fg: varr(--near-black);
+  --bg: var(--near-white);
+  --fg: var(--near-black);
 
   --primary: var(--purple);
   --secondary: var(--orange);

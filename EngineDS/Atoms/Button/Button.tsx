@@ -19,8 +19,8 @@ export const Button = ({
       type="button"
       className={[
         "engine-button",
-        `engine-button--${hierarchy}`,
-        `engine-button--${size}`,
+        hierarchy !== "primary" ? `engine-button--${hierarchy}` : ``,
+        size !== "medium" ? `engine-button--${size}` : ``,
       ].join(" ")}
       {...props}
     >

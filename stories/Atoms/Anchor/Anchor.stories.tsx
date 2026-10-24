@@ -23,3 +23,11 @@ export const Default: Story = {
     children: "About",
   },
 };
+
+export const ReversedUnderline: Story = {
+  args: {
+    href: "/about",
+    children: "About",
+    reversedUnderline: true,
+  },
+};

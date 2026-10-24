@@ -7,6 +7,7 @@
   text-transform: uppercase;
   font-weight: 900;
   font-size: 1rem;
+  background-color: var(--primary);
   color: var(--bg);
 }
 
@@ -18,10 +19,6 @@
 .engine-button--large {
   padding: 1.5rem 3rem;
   font-size: 1.25rem;
-}
-
-.engine-button--primary {
-  background-color: var(--primary);
 }
 
 .engine-button--secondary {

@@ -1,11 +1,25 @@
 .engine-link {
-  color: inherit;
-  text-decoration-color: var(--primary);
+  color: var(--primary);
+  text-decoration-color: inherit;
   text-decoration-thickness: 0.12rem;
+
+  svg {
+    color: var(--fg);
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: var(--primary);
+      text-decoration: none;
+    }
+  }
+}
+
+.engine-link--reversed-underline {
+  text-decoration: none;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

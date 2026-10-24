@@ -1,38 +1,24 @@
 import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 import { Logo } from "@/EngineDS/Atoms/Logo/Logo";
+import { Navbar, type NavbarProps } from "@/EngineDS/Molecules/Navbar/Navbar";
 import "./header.css";
 
-export const Header = () => {
+export interface HeaderProps {
+  links: NavbarProps["links"];
+  theme?: "light" | "dark";
+}
+
+export const Header = ({ links, theme = "dark" }: HeaderProps) => {
   return (
-    <header className="t-dark">
+    <header className={`engine--t-${theme} engine-header`}>
       <div className="wrapper">
-        <div className="container">
-          <div className="main-nav-logo">
+        <div className="header-container">
+          <div className="header-logo">
             <Anchor href={`/`} aria-label="CJ White DEV home">
               <Logo aria-hidden="true" focusable="false" />
             </Anchor>
           </div>
-          <div className="main-container">
-            <button className="nav-controller">
-              <span></span>
-            </button>
-            <div className="nav-container">
-              <ul className="main-nav">
-                <li>
-                  <Anchor href={`/`}>portfolio</Anchor>
-                </li>
-                <li>
-                  <Anchor href={`/`}>github</Anchor>
-                </li>
-                <li>
-                  <Anchor href={`/`}>resume</Anchor>
-                </li>
-                <li>
-                  <Anchor href={`/`}>contact</Anchor>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Navbar links={links} theme={theme} />
         </div>
       </div>
     </header>
