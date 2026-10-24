@@ -10,4 +10,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    teaserSrc: "/media/placeholder.jpg",
+    teaserAlt: "Placeholder image",
+    children: (
+      <div>
+        <h3>Card Title</h3>
+        <p>Card description goes here.</p>
+      </div>
+    ),
+  },
+};
