@@ -10,7 +10,7 @@ const meta = {
   },
 } satisfies Meta<typeof Header>;
 
-const themes = ["light", "dark"];
+const themes = ["light", "dark"] as const;
 
 export default meta;
 // 👇 Type helper to reduce boilerplate

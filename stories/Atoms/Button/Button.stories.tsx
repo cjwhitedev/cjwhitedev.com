@@ -9,9 +9,9 @@ const meta = {
   },
 } satisfies Meta<typeof Button>;
 
-const hierarchies = ["primary", "secondary", "tertiary"];
+const hierarchies = ["primary", "secondary", "tertiary"] as const;
 
-const sizes = ["small", "medium", "large"];
+const sizes = ["small", "medium", "large"] as const;
 
 export default meta;
 // 👇 Type helper to reduce boilerplate
