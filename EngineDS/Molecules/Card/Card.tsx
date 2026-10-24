@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import "./card.css";
 
 export type CardProps = {
@@ -6,20 +7,25 @@ export type CardProps = {
   teaserSrc?: string;
   teaserAlt?: string;
   theme?: "light" | "dark";
+  href?: string;
 };
 
-export function Card({ children, theme = "dark", ...props }: CardProps) {
+export function Card({ children, theme = "dark", href, ...props }: CardProps) {
   return (
-    <div className={`engine-card engine--t-${theme}`} {...props}>
+    <div
+      className={`engine-card engine--t-${theme} ${href ? "engine-card--linked" : ""}`}
+      {...props}
+    >
       <div className="engine-card__teaser">
         <Image
           src={props.teaserSrc ?? ""}
           alt={props.teaserAlt ?? ""}
-          width={300}
-          height={200}
+          width={380}
+          height={285}
         />
       </div>
       <div className="engine-card__content">{children}</div>
+      {href && <Link href={href} className="engine-card__link"></Link>}
     </div>
   );
 }

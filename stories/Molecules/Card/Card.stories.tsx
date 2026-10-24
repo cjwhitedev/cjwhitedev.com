@@ -5,6 +5,9 @@ import { Card } from "@/EngineDS/Molecules/Card/Card";
 const meta = {
   title: "Engine DS/Molecules/Card",
   component: Card,
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof Card>;
 
 export default meta;
@@ -14,6 +17,20 @@ export const Default: Story = {
   args: {
     teaserSrc: "/media/placeholder.jpg",
     teaserAlt: "Placeholder image",
+    children: (
+      <div>
+        <h3>Card Title</h3>
+        <p>Card description goes here.</p>
+      </div>
+    ),
+  },
+};
+
+export const Linked: Story = {
+  args: {
+    teaserSrc: "/media/placeholder.jpg",
+    teaserAlt: "Placeholder image",
+    href: "/linked-page",
     children: (
       <div>
         <h3>Card Title</h3>
