@@ -9,10 +9,6 @@ const meta = {
   },
 } satisfies Meta<typeof Button>;
 
-const hierarchies = ["primary", "secondary", "tertiary"] as const;
-
-const sizes = ["small", "medium", "large"] as const;
-
 export default meta;
 // 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
@@ -22,6 +18,8 @@ export const Default: Story = {
     label: "button",
   },
 };
+
+const hierarchies = ["primary", "secondary", "tertiary"] as const;
 
 export const Hierarchies: Story = {
   args: {
@@ -41,6 +39,8 @@ export const Hierarchies: Story = {
     </div>
   ),
 };
+
+const sizes = ["small", "medium", "large"] as const;
 
 export const Sizes: Story = {
   args: {

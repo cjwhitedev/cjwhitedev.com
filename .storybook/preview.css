@@ -7,3 +7,12 @@ body.sb-main-fullscreen {
 .docs-story {
   background-color: var(--bg);
 }
+
+.sb-show-main.sb-main-centered #storybook-root {
+  width: 100%;
+  padding: 0;
+}
+
+.docs-story .engine-card {
+  max-width: 285px;
+}

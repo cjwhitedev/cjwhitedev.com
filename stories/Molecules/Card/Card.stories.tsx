@@ -2,6 +2,10 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Card } from "@/EngineDS/Molecules/Card/Card";
 
+import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
+import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
+import { themes } from "storybook/theming";
+
 const meta = {
   title: "Engine DS/Molecules/Card",
   component: Card,
@@ -38,4 +42,33 @@ export const Linked: Story = {
       </div>
     ),
   },
+};
+
+export const LayoutThirdsUseCase = {
+  args: {
+    teaserSrc: "/media/placeholder.jpg",
+    teaserAlt: "Placeholder image",
+  },
+  render: (args) => (
+    <Layout layout="thirds-from-small">
+      <LayoutItem>
+        <Card {...args}>
+          <h3>Card Title 1</h3>
+          <p>Card description goes here.</p>
+        </Card>
+      </LayoutItem>
+      <LayoutItem>
+        <Card {...args}>
+          <h3>Card Title 1</h3>
+          <p>Card description goes here.</p>
+        </Card>
+      </LayoutItem>
+      <LayoutItem>
+        <Card {...args}>
+          <h3>Card Title 1</h3>
+          <p>Card description goes here.</p>
+        </Card>
+      </LayoutItem>
+    </Layout>
+  ),
 };

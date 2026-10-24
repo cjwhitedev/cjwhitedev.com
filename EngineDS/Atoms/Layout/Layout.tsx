@@ -12,9 +12,7 @@ export interface LayoutProps {
     | "fourths-from-small"
     | "fourths-from-medium";
   theme?: "light" | "dark";
-  align?: "start" | "center" | "end";
-  valign?: "start" | "center" | "end";
-  gutter?: "none" | "small" | "medium" | "large";
+  gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";
 }
 
@@ -22,9 +20,7 @@ export const Layout = ({
   children,
   layout = "full",
   theme = "light",
-  align = "start",
-  valign = "start",
-  gutter = "medium",
+  gap = "medium",
   padding = "medium",
 }: LayoutProps) => {
   return (
@@ -35,9 +31,7 @@ export const Layout = ({
         className={[
           "engine-layout",
           `engine-layout--l-${layout}`,
-          `engine-layout--a-${align}`,
-          `engine-layout--v-${valign}`,
-          `engine-layout--g-${gutter}`,
+          `engine-layout--g-${gap}`,
           `engine-layout--p-${padding}`,
         ].join(" ")}
       >

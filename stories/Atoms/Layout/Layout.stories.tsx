@@ -16,17 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: (
-      <LayoutItem>
-        <p>Layout Item.</p>
-      </LayoutItem>
-    ),
-  },
-};
-
-export const LayoutHalves: Story = {
-  args: {
-    layout: "halves",
+    layout: "halves-from-small",
     children: (
       <>
         <LayoutItem>
@@ -40,7 +30,28 @@ export const LayoutHalves: Story = {
   },
 };
 
-export const LayoutHalvesFromSmall: Story = {
+export const LayoutThirds: Story = {
+  args: {
+    layout: "thirds-from-small",
+    children: (
+      <>
+        <LayoutItem>
+          <p>Layout Item 1.</p>
+        </LayoutItem>
+        <LayoutItem>
+          <p>Layout Item 2.</p>
+        </LayoutItem>
+        <LayoutItem>
+          <p>Layout Item 3.</p>
+        </LayoutItem>
+      </>
+    ),
+  },
+};
+
+const themes = ["light", "dark"] as const;
+
+export const Themes: Story = {
   args: {
     layout: "halves-from-small",
     children: (
@@ -54,4 +65,13 @@ export const LayoutHalvesFromSmall: Story = {
       </>
     ),
   },
+  render: (args) => (
+    <>
+      {themes.map((theme) => (
+        <div key={theme} data-theme={theme}>
+          <Layout theme={theme} {...args} />
+        </div>
+      ))}
+    </>
+  ),
 };
