@@ -1,5 +1,5 @@
-/* colors */
 :root {
+  /* colors */
   --beige: #f6e1c3;
   --orange: #e9a178;
   --maroon: #a84448;
@@ -13,6 +13,8 @@
 
   --primary: var(--purple);
   --secondary: var(--orange);
+
+  --max-width: 55rem;
 }
 
 /* @media (prefers-color-scheme: dark) {

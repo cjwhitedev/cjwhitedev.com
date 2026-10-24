@@ -1,0 +1,7 @@
+.engine-codeblock {
+  background-color: var(--near-black);
+  color: var(--near-white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: monospace;
+}
