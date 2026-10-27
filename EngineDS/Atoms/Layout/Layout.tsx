@@ -15,6 +15,7 @@ export interface LayoutProps {
   theme?: "light" | "dark";
   gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";
+  align?: "start" | "center" | "end";
   valign?: "start" | "center" | "end";
 }
 
@@ -24,6 +25,7 @@ export const Layout = ({
   theme = "light",
   gap = "medium",
   padding = "medium",
+  align = "start",
   valign = "start",
 }: LayoutProps) => {
   return (
@@ -36,6 +38,7 @@ export const Layout = ({
           `engine-layout--l-${layout}`,
           `engine-layout--g-${gap}`,
           `engine-layout--p-${padding}`,
+          `engine-layout--a-${align}`,
           `engine-layout--v-${valign}`,
         ].join(" ")}
       >

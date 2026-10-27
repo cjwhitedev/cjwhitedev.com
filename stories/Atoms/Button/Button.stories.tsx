@@ -67,9 +67,6 @@ export const Hierarchies: Story = {
 const sizes = ["small", "medium", "large"] as const;
 
 export const Sizes: Story = {
-  parameters: {
-    layout: "centered",
-  },
   args: {
     label: "Button",
     hierarchy: "primary",

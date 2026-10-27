@@ -75,10 +75,6 @@
   }
 }
 
-.engine-layout--l-three-tiles {
-  text-align: center;
-}
-
 @media (min-width: 768px) {
   .engine-layout--l-three-tiles {
     grid-template-columns: repeat(3, min-content);
@@ -91,6 +87,14 @@
 
 .engine-layout--v-end {
   align-items: end;
+}
+
+.engine-layout--a-center {
+  justify-content: center;
+}
+
+.engine-layout--a-end {
+  justify-content: end;
 }
 
 .engine-layout-item {

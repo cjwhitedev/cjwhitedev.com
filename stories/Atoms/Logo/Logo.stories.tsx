@@ -8,6 +8,9 @@ import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
 const meta = {
   title: "Engine DS/Atoms/Logo",
   component: Logo,
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof Logo>;
 
 export default meta;
@@ -19,7 +22,7 @@ const colors = ["primary", "secondary", "tertiary"] as const;
 
 export const ColorOptions: Story = {
   render: () => (
-    <Layout layout="three-tiles">
+    <Layout layout="three-tiles" align="center">
       {colors.map((color) => (
         <LayoutItem key={color}>
           <Logo color={color} />
