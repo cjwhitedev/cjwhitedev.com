@@ -4,7 +4,6 @@ import { Card } from "@/EngineDS/Molecules/Card/Card";
 
 import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
 import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
-import { themes } from "storybook/theming";
 
 const meta = {
   title: "Engine DS/Molecules/Card",
@@ -44,7 +43,7 @@ export const Linked: Story = {
   },
 };
 
-export const LayoutThirdsUseCase = {
+export const UseCaseLayoutThirds = {
   args: {
     teaserSrc: "/media/placeholder.jpg",
     teaserAlt: "Placeholder image",

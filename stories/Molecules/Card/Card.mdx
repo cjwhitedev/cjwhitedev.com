@@ -1,16 +1,24 @@
-import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
 import * as CardStories from "./Card.stories";
 
 <Meta of={CardStories} name="Docs" />
 
 # Card
 
+A teaser style element ment to link to more information. The card will grow to fit its wrapper.
+
+<Controls />
+
+## Default Card
+
 <Canvas of={CardStories.Default} />
 
 ## Linked
 
+Pass a link through the `href` prop to render the card with a link. Note that links inside storybook demos do not work as expected.
+
 <Canvas of={CardStories.Linked} />
 
-## Layout Thirds Use Case
+## Use Case Layout Thirds
 
-<Canvas of={CardStories.LayoutThirdsUseCase} />
+<Canvas of={CardStories.UseCaseLayoutThirds} />

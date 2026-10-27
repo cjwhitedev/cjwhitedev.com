@@ -1,12 +1,20 @@
-import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
 import * as AnchorStories from "./Anchor.stories";
 
 <Meta of={AnchorStories} name="Docs" />
 
 # Anchor
 
+A basic anchor tag built on top of Next.js' default Link component.
+
+<Controls />
+
+## Default Anchor
+
 <Canvas of={AnchorStories.Default} />
 
 ## Reversed Underline
+
+Set the `reversedUnderline` property to `true` to hide the underline by default, making it visible when hovered over.
 
 <Canvas of={AnchorStories.ReversedUnderline} />

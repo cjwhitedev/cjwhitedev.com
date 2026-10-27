@@ -1,4 +1,4 @@
-.engine-link {
+.engine-anchor {
   color: var(--primary);
   text-decoration-color: inherit;
   text-decoration-thickness: 0.12rem;
@@ -14,7 +14,7 @@
   }
 }
 
-.engine-link--reversed-underline {
+.engine-anchor--reversed-underline {
   text-decoration: none;
 
   @media (hover: hover) and (pointer: fine) {

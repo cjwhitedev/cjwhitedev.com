@@ -5,16 +5,28 @@ import * as LayoutStories from "./Layout.stories";
 
 # Layout
 
+A css-grid based layout controller with several familiar layout options.
+
 <Controls exclude={["children"]} />
 
-## Basic Layout
+## Two Column Layout
+
+All of the demos on this page use their `-from-small` varients by default to present better mobile-first practices.
 
 <Canvas of={LayoutStories.Default} />
 
-## Layout Thirds From Small
+## Three Column Layout
 
 <Canvas of={LayoutStories.LayoutThirds} />
 
 ## Themes
 
+This arg allows for a theme to be passed in, all current options displayed below.
+
 <Canvas of={LayoutStories.Themes} />
+
+## Use Case Cards
+
+This example shows how a layout might be used in production. In this case, to house three Cards. This demo also serves as a great example for the gap and valign args, try them out in the story through the link in the sidebar.
+
+<Canvas of={LayoutStories.UseCaseCards} />

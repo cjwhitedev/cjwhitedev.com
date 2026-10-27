@@ -26,6 +26,7 @@ const preview: Preview = {
         order: [
           "Engine DS",
           [
+            "Welcome",
             "Foundations",
             ["*", ["Docs", "*"]],
             "Atoms",

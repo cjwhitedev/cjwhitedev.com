@@ -9,6 +9,26 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    hierarchy: {
+      description:
+        "Used to change the button's appearance based on importance.",
+    },
+    size: {
+      description: "will change the size of the button.",
+    },
+    label: {
+      control: "text",
+      description: "The text displayed within the button element.",
+    },
+    onClick: {
+      description:
+        "Used to pass a function to be fired on interaction with the button.",
+    },
+    href: {
+      description: "Converts button to a stlyed link.",
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -29,7 +49,7 @@ export const Hierarchies: Story = {
     size: "medium",
   },
   render: (args) => (
-    <Layout layout="thirds-from-small">
+    <Layout layout="three-tiles">
       {hierarchies.map((hierarchy) => (
         <LayoutItem key={hierarchy}>
           <Button
@@ -47,12 +67,15 @@ export const Hierarchies: Story = {
 const sizes = ["small", "medium", "large"] as const;
 
 export const Sizes: Story = {
+  parameters: {
+    layout: "centered",
+  },
   args: {
     label: "Button",
     hierarchy: "primary",
   },
   render: (args) => (
-    <Layout layout="tiles" valign="center">
+    <Layout layout="three-tiles" valign="center">
       {sizes.map((size) => (
         <LayoutItem key={size}>
           <Button {...args} key={size} size={size} label={size} />
@@ -60,4 +83,18 @@ export const Sizes: Story = {
       ))}
     </Layout>
   ),
+};
+
+export const OnClick: Story = {
+  args: {
+    label: "Alert Button",
+    onClick: () => alert("Hello World!"),
+  },
+};
+
+export const Href: Story = {
+  args: {
+    label: "Linked Button",
+    href: "https://www.google.com/",
+  },
 };

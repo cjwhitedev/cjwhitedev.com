@@ -1,6 +1,7 @@
 .engine-layout__container {
   display: flex;
   flex-direction: column;
+  padding: 0 1rem;
 }
 
 .engine-layout {
@@ -26,15 +27,15 @@
 }
 
 .engine-layout--p-none {
-  padding: 0;
+  padding: 0 0;
 }
 
 .engine-layout--p-small {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .engine-layout--p-large {
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .engine-layout--l-halves {
@@ -74,12 +75,22 @@
   }
 }
 
-.engine-layout--l-tiles {
-  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+.engine-layout--l-three-tiles {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .engine-layout--l-three-tiles {
+    grid-template-columns: repeat(3, min-content);
+  }
 }
 
 .engine-layout--v-center {
   align-items: center;
+}
+
+.engine-layout--v-end {
+  align-items: end;
 }
 
 .engine-layout-item {

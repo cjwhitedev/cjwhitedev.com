@@ -42,12 +42,16 @@ h6 {
 p,
 li,
 blockquote {
+  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
   line-height: 1.65;
 }
 
 p {
-  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
   margin: 0 0 1em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 blockquote {

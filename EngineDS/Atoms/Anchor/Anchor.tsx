@@ -14,8 +14,8 @@ export function Anchor({
   return (
     <Link
       className={[
-        "engine-link",
-        reversedUnderline && "engine-link--reversed-underline",
+        "engine-anchor",
+        reversedUnderline && "engine-anchor--reversed-underline",
         className,
       ]
         .filter(Boolean)

@@ -1,13 +1,33 @@
-import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
 import * as ButtonStories from "./Button.stories";
 
 <Meta of={ButtonStories} name="Docs" />
 
 # Button
 
+A button
+
+<Controls />
+
+## Default Button
+
 <Canvas of={ButtonStories.Default} />
 
+## onClick
+
+Clicking on this button will prompt `alert('Hello World!')`
+
+<Canvas of={ButtonStories.OnClick} />
+
+## HREF
+
+This button is now just a styled [Anchor](?path=/docs/engine-ds-atoms-anchor--docs). Note that links inside storybook demos do not work as expected.
+
+<Canvas of={ButtonStories.Href} />
+
 ## Hierarchies
+
+Use a different hierarchy style to establish different levels of importance across a page.
 
 <Canvas of={ButtonStories.Hierarchies} />
 

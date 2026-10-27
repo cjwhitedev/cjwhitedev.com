@@ -11,7 +11,7 @@ export interface LayoutProps {
     | "fourths"
     | "fourths-from-small"
     | "fourths-from-medium"
-    | "tiles";
+    | "three-tiles";
   theme?: "light" | "dark";
   gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";

@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
 import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
 
+import { Card } from "@/EngineDS/Molecules/Card/Card";
+
 const meta = {
   title: "Engine DS/Atoms/Layout",
   component: Layout,
@@ -74,4 +76,41 @@ export const Themes: Story = {
       ))}
     </>
   ),
+};
+
+export const UseCaseCards: Story = {
+  args: {
+    layout: "thirds-from-small",
+    children: (
+      <>
+        <LayoutItem>
+          <Card
+            teaserSrc="/media/placeholder.jpg"
+            teaserAlt="Placeholder image"
+          >
+            <h3>Card Title 1</h3>
+            <p>Card description goes here.</p>
+          </Card>
+        </LayoutItem>
+        <LayoutItem>
+          <Card
+            teaserSrc="/media/placeholder.jpg"
+            teaserAlt="Placeholder image"
+          >
+            <h3>Card Title 1</h3>
+            <p>Card description goes here.</p>
+          </Card>
+        </LayoutItem>
+        <LayoutItem>
+          <Card
+            teaserSrc="/media/placeholder.jpg"
+            teaserAlt="Placeholder image"
+          >
+            <h3>Card Title 1</h3>
+            <p>A slightly longer card description goes here.</p>
+          </Card>
+        </LayoutItem>
+      </>
+    ),
+  },
 };

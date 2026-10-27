@@ -2,17 +2,40 @@
 
 body.sb-main-fullscreen {
   background-color: #fff;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-open-sans, "Trebuchet MS", sans-serif);
+    line-height: 1.2;
+    margin: 0 0 0.65em;
+  }
+
+  p,
+  li,
+  blockquote {
+    font-size: 1rem;
+    font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+    line-height: 1.65;
+  }
 }
 
 .docs-story {
   background-color: var(--bg);
 }
 
-.sb-show-main.sb-main-centered #storybook-root {
+/* .sb-show-main.sb-main-centered #storybook-root {
   width: 100%;
   padding: 0;
-}
+} */
 
 .docs-story .engine-card {
   max-width: 285px;
+}
+
+.css-1cymxic :where(p:not(.sb-anchor, .sb-unstyled, .sb-unstyled p)) {
+  font-size: 1rem;
 }

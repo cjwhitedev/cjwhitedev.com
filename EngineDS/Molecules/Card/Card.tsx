@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 import "./card.css";
 
 export type CardProps = {
@@ -25,7 +25,7 @@ export function Card({ children, theme = "dark", href, ...props }: CardProps) {
         />
       </div>
       <div className="engine-card__content">{children}</div>
-      {href && <Link href={href} className="engine-card__link"></Link>}
+      {href && <Anchor href={href} className="engine-card__link" />}
     </div>
   );
 }

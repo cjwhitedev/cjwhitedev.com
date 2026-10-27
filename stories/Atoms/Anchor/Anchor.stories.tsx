@@ -9,8 +9,22 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    href: { control: "text" },
-    children: { control: "text" },
+    href: {
+      control: "text",
+      description: "The target address of the anchor link.",
+    },
+    children: {
+      control: "text",
+      description: "The text displayed within the anchor tag.",
+    },
+    reversedUnderline: {
+      control: "boolean",
+      description:
+        "Hides the default visible underline to be revealed on hover.",
+      table: {
+        defaultValue: { summary: "false" },
+      },
+    },
   },
 } satisfies Meta<typeof Anchor>;
 
@@ -19,15 +33,25 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    href: "/about",
-    children: "About",
+    href: "/",
+    children: "ipsum",
   },
+  render: (args) => (
+    <p>
+      Lorem <Anchor {...args} /> dolor sit amet.
+    </p>
+  ),
 };
 
 export const ReversedUnderline: Story = {
   args: {
-    href: "/about",
-    children: "About",
+    href: "/",
+    children: "ipsum",
     reversedUnderline: true,
   },
+  render: (args) => (
+    <p>
+      Lorem <Anchor {...args} /> dolor sit amet.
+    </p>
+  ),
 };
