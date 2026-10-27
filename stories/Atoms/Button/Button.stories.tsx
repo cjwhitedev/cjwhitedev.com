@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Button } from "@/EngineDS/Atoms/Button/Button";
+import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
+import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
 
 const meta = {
   title: "Engine DS/Atoms/Button",
@@ -27,16 +29,18 @@ export const Hierarchies: Story = {
     size: "medium",
   },
   render: (args) => (
-    <div style={{ display: "flex", gap: "1rem" }}>
+    <Layout layout="thirds-from-small">
       {hierarchies.map((hierarchy) => (
-        <Button
-          {...args}
-          key={hierarchy}
-          hierarchy={hierarchy}
-          label={hierarchy}
-        />
+        <LayoutItem key={hierarchy}>
+          <Button
+            {...args}
+            key={hierarchy}
+            hierarchy={hierarchy}
+            label={hierarchy}
+          />
+        </LayoutItem>
       ))}
-    </div>
+    </Layout>
   ),
 };
 
@@ -48,10 +52,12 @@ export const Sizes: Story = {
     hierarchy: "primary",
   },
   render: (args) => (
-    <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+    <Layout layout="tiles" valign="center">
       {sizes.map((size) => (
-        <Button {...args} key={size} size={size} label={size} />
+        <LayoutItem key={size}>
+          <Button {...args} key={size} size={size} label={size} />
+        </LayoutItem>
       ))}
-    </div>
+    </Layout>
   ),
 };

@@ -10,10 +10,12 @@ export interface LayoutProps {
     | "thirds-from-small"
     | "fourths"
     | "fourths-from-small"
-    | "fourths-from-medium";
+    | "fourths-from-medium"
+    | "tiles";
   theme?: "light" | "dark";
   gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";
+  valign?: "start" | "center" | "end";
 }
 
 export const Layout = ({
@@ -22,6 +24,7 @@ export const Layout = ({
   theme = "light",
   gap = "medium",
   padding = "medium",
+  valign = "start",
 }: LayoutProps) => {
   return (
     <div
@@ -33,6 +36,7 @@ export const Layout = ({
           `engine-layout--l-${layout}`,
           `engine-layout--g-${gap}`,
           `engine-layout--p-${padding}`,
+          `engine-layout--v-${valign}`,
         ].join(" ")}
       >
         {children}
