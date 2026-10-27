@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    title: "navbar demo",
     links: [
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },

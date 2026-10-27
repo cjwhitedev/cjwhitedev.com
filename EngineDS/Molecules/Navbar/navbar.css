@@ -1,7 +1,14 @@
 .engine-navbar__container {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.engine-navbar__title {
+  font-family: var(--font-open-sans, "Trebuchet MS", sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .engine-navbar__toggle {
@@ -16,15 +23,15 @@
   border: 1px solid currentColor;
   border-radius: 6px;
   cursor: pointer;
-}
 
-.engine-navbar__toggle:hover {
-  background: color-mix(in srgb, currentColor 12%, transparent);
-}
+  &:hover {
+    background: color-mix(in srgb, currentColor 12%, transparent);
+  }
 
-.engine-navbar__toggle:focus-visible {
-  outline: 3px solid currentColor;
-  outline-offset: 3px;
+  &:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
 }
 
 .engine-navbar__toggle-bar {
@@ -40,7 +47,7 @@
   flex-direction: column;
   align-items: stretch;
   position: fixed;
-  top: 76px;
+  top: 60px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -68,7 +75,7 @@
 
 .engine-navbar__item a {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   color: inherit;
 }
 

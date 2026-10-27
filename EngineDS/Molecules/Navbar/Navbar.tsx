@@ -7,9 +7,10 @@ import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 export interface NavbarProps {
   links: { label: string; href: string }[];
   theme?: "light" | "dark";
+  title?: string;
 }
 
-export const Navbar = ({ links, theme = "dark" }: NavbarProps) => {
+export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -27,6 +28,7 @@ export const Navbar = ({ links, theme = "dark" }: NavbarProps) => {
     <div
       className={`engine-navbar engine-navbar__container engine--t-${theme}`}
     >
+      {title && <span className="engine-navbar__title">{title}</span>}
       <button
         type="button"
         className="engine-navbar__toggle"
