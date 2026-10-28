@@ -1,15 +1,34 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { Card } from "@/EngineDS/Molecules/Card/Card";
+import { Card, CardProps } from "@/EngineDS/Molecules/Card/Card";
 
-import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
-import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
+import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
+import { JSX } from "react/jsx-runtime";
 
 const meta = {
   title: "Engine DS/Molecules/Card",
   component: Card,
   parameters: {
     layout: "centered",
+  },
+  argTypes: {
+    children: {
+      control: "text",
+      description: "The content to be displayed below the image.",
+    },
+    teasersrc: {
+      description: "The path to the image meant to be displayed on the card.",
+    },
+    teaseralt: {
+      description: "A description of the image necessary for accessiblity.",
+    },
+    theme: {
+      description: "Sets specified colorways for the card and content within.",
+    },
+    href: {
+      description:
+        "Provide a link to turn the card itself into a clickable link.",
+    },
   },
 } satisfies Meta<typeof Card>;
 
@@ -18,8 +37,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    teaserSrc: "/media/placeholder.jpg",
-    teaserAlt: "Placeholder image",
+    teasersrc: "/media/placeholder.jpg",
+    teaseralt: "Placeholder image",
     children: (
       <div>
         <h3>Card Title</h3>
@@ -31,8 +50,8 @@ export const Default: Story = {
 
 export const Linked: Story = {
   args: {
-    teaserSrc: "/media/placeholder.jpg",
-    teaserAlt: "Placeholder image",
+    teasersrc: "/media/placeholder.jpg",
+    teaseralt: "Placeholder image",
     href: "/linked-page",
     children: (
       <div>
@@ -45,10 +64,10 @@ export const Linked: Story = {
 
 export const UseCaseLayoutThirds = {
   args: {
-    teaserSrc: "/media/placeholder.jpg",
-    teaserAlt: "Placeholder image",
+    teasersrc: "/media/placeholder.jpg",
+    teaseralt: "Placeholder image",
   },
-  render: (args) => (
+  render: (args: CardProps) => (
     <Layout layout="thirds-from-small">
       <LayoutItem>
         <Card {...args}>

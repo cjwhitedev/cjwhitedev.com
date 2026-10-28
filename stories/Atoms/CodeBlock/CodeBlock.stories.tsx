@@ -5,6 +5,11 @@ import { CodeBlock } from "@/EngineDS/Atoms/CodeBlock/CodeBlock";
 const meta = {
   title: "Engine DS/Atoms/CodeBlock",
   component: CodeBlock,
+  argTypes: {
+    code: {
+      description: "The main content to be displayed as a code snippet.",
+    },
+  },
 } satisfies Meta<typeof CodeBlock>;
 
 export default meta;

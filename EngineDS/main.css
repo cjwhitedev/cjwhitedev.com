@@ -14,7 +14,7 @@ body {
   color: var(--fg);
 }
 
-.wrapper {
+.engine-wrapper {
   display: flex;
   width: 100%;
   max-width: var(--max-width);

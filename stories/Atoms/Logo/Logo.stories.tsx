@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Logo } from "@/EngineDS/Atoms/Logo/Logo";
 
-import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
-import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
+import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
 
 const meta = {
   title: "Engine DS/Atoms/Logo",

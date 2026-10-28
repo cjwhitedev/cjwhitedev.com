@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import "./navbar.css";
-import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
+import { Anchor, type AnchorProps } from "@/EngineDS/Atoms/Anchor/Anchor";
 
 export interface NavbarProps {
-  links: { label: string; href: string }[];
+  links: AnchorProps[];
   theme?: "light" | "dark";
   title?: string;
 }
@@ -45,8 +45,13 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
       >
         <ul className="engine-navbar__list">
           {links.map((link) => (
-            <li key={link.href} className="engine-navbar__item">
-              <Anchor href={link.href}>{link.label}</Anchor>
+            <li key={link.id} className="engine-navbar__item">
+              <Anchor
+                href={link.href}
+                reversedUnderline={link.reversedUnderline}
+              >
+                {link.children}
+              </Anchor>
             </li>
           ))}
         </ul>

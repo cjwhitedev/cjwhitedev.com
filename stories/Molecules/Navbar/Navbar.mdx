@@ -1,8 +1,18 @@
-import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
 import * as NavbarStories from "./Navbar.stories";
 
 <Meta of={NavbarStories} name="Docs" />
 
 # Navbar
 
+Navbar Text
+
+<Controls />
+
+## Default Navbar
+
 <Canvas of={NavbarStories.Default} />
+
+## Theme
+
+<Canvas of={NavbarStories.Theme} />

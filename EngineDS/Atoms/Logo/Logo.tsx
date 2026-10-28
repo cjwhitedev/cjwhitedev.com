@@ -6,10 +6,10 @@ export interface LogoProps extends Omit<SVGProps<SVGSVGElement>, "color"> {
   color?: "inherit" | "primary" | "secondary" | "tertiary";
 }
 
-export function Logo({ color = "inherit", className, ...props }: LogoProps) {
+export function Logo({ color, className, ...props }: LogoProps) {
   return (
     <LogoSvg
-      className={["engine-logo", `engine-logo--${color}`, className]
+      className={["engine-logo", color && `engine-logo--${color}`, className]
         .filter(Boolean)
         .join(" ")}
       {...props}

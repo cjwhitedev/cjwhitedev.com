@@ -10,8 +10,6 @@ const meta = {
   },
 } satisfies Meta<typeof Header>;
 
-const themes = ["light", "dark"] as const;
-
 export default meta;
 // 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
@@ -20,28 +18,22 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     links: [
-      { label: "Portfolio", href: "/" },
-      { label: "GitHub", href: "/" },
-      { label: "Resume", href: "/" },
-      { label: "Contact", href: "/" },
+      { children: "Portfolio", href: "/" },
+      { children: "GitHub", href: "/" },
+      { children: "Resume", href: "/" },
+      { children: "Contact", href: "/" },
     ],
   },
 };
 
-export const Themes: Story = {
+export const Theme: Story = {
   args: {
+    theme: "light",
     links: [
-      { label: "Portfolio", href: "/" },
-      { label: "GitHub", href: "/" },
-      { label: "Resume", href: "/" },
-      { label: "Contact", href: "/" },
+      { children: "Portfolio", href: "/" },
+      { children: "GitHub", href: "/" },
+      { children: "Resume", href: "/" },
+      { children: "Contact", href: "/" },
     ],
   },
-  render: (args) => (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      {themes.map((theme) => (
-        <Header {...args} key={theme} theme={theme} />
-      ))}
-    </div>
-  ),
 };

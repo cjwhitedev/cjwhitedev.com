@@ -7,6 +7,19 @@ const meta = {
   parameters: {
     layout: "fullscreen",
   },
+  argTypes: {
+    links: {
+      description:
+        "An array of objects each with args passed to the Anchor component",
+    },
+    theme: {
+      description:
+        "Sets specified colorways for the navbar and content within.",
+    },
+    title: {
+      description: "A short string to be displayed on the left of the navbar.",
+    },
+  },
 } satisfies Meta<typeof Navbar>;
 
 export default meta;
@@ -15,11 +28,23 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: "navbar demo",
+    title: "Navbar Demo",
     links: [
-      { label: "Home", href: "/" },
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
+      { children: "Home", href: "/" },
+      { children: "About", href: "/about" },
+      { children: "Contact", href: "/contact" },
+    ],
+  },
+};
+
+export const Theme: Story = {
+  args: {
+    title: "Navbar Demo",
+    theme: "light",
+    links: [
+      { children: "Home", href: "/" },
+      { children: "About", href: "/about" },
+      { children: "Contact", href: "/contact" },
     ],
   },
 };

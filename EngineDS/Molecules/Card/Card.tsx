@@ -4,8 +4,8 @@ import "./card.css";
 
 export type CardProps = {
   children: React.ReactNode;
-  teaserSrc?: string;
-  teaserAlt?: string;
+  teasersrc: string;
+  teaseralt: string;
   theme?: "light" | "dark";
   href?: string;
 };
@@ -18,8 +18,8 @@ export function Card({ children, theme = "dark", href, ...props }: CardProps) {
     >
       <div className="engine-card__teaser">
         <Image
-          src={props.teaserSrc ?? ""}
-          alt={props.teaserAlt ?? ""}
+          src={props.teasersrc ?? ""}
+          alt={props.teaseralt ?? ""}
           width={380}
           height={285}
         />

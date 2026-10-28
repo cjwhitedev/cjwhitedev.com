@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Button } from "@/EngineDS/Atoms/Button/Button";
-import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
-import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
+import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
 
 const meta = {
   title: "Engine DS/Atoms/Button",

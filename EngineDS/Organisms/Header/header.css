@@ -3,16 +3,21 @@
   justify-content: center;
   position: relative;
   z-index: 1000;
+  height: 76px;
 
-  .wrapper {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  .engine-wrapper {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
-  .header-container {
+  .engine-header__container {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
+  }
+
+  .engine-navbar__nav {
+    top: 4.75rem;
   }
 }

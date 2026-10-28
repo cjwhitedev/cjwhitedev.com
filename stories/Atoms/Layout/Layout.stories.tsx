@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
-import { LayoutItem } from "@/EngineDS/Atoms/Layout/LayoutItem";
+import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
 
 import { Card } from "@/EngineDS/Molecules/Card/Card";
 
@@ -11,6 +10,27 @@ const meta = {
   parameters: {
     layout: "fullscreen",
   },
+  argTypes: {
+    layout: {
+      description: "Options for displaying content in columns.",
+    },
+    theme: {
+      description:
+        "Sets specified colorways for the layout and content within.",
+    },
+    gap: {
+      description: "The space between columns.",
+    },
+    padding: {
+      description: "The space above and below the layout layer.",
+    },
+    align: {
+      description: "Used to align the content horizontally.",
+    },
+    valign: {
+      description: "Used to align the content vertically.",
+    },
+  },
 } satisfies Meta<typeof Layout>;
 
 export default meta;
@@ -18,7 +38,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    layout: "halves-from-small",
+    layout: ["halves-from-small", "fourths-from-medium"],
     children: (
       <>
         <LayoutItem>
@@ -85,8 +105,8 @@ export const UseCaseCards: Story = {
       <>
         <LayoutItem>
           <Card
-            teaserSrc="/media/placeholder.jpg"
-            teaserAlt="Placeholder image"
+            teasersrc="/media/placeholder.jpg"
+            teaseralt="Placeholder image"
           >
             <h3>Card Title 1</h3>
             <p>Card description goes here.</p>
@@ -94,8 +114,8 @@ export const UseCaseCards: Story = {
         </LayoutItem>
         <LayoutItem>
           <Card
-            teaserSrc="/media/placeholder.jpg"
-            teaserAlt="Placeholder image"
+            teasersrc="/media/placeholder.jpg"
+            teaseralt="Placeholder image"
           >
             <h3>Card Title 1</h3>
             <p>Card description goes here.</p>
@@ -103,8 +123,8 @@ export const UseCaseCards: Story = {
         </LayoutItem>
         <LayoutItem>
           <Card
-            teaserSrc="/media/placeholder.jpg"
-            teaserAlt="Placeholder image"
+            teasersrc="/media/placeholder.jpg"
+            teaseralt="Placeholder image"
           >
             <h3>Card Title 1</h3>
             <p>A slightly longer card description goes here.</p>

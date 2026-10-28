@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 0 0.5rem 1rem;
+  height: calc(3.75rem - 1rem);
 }
 
 .engine-navbar__title {
@@ -23,6 +24,7 @@
   border: 1px solid currentColor;
   border-radius: 6px;
   cursor: pointer;
+  margin-right: 1rem;
 
   &:hover {
     background: color-mix(in srgb, currentColor 12%, transparent);
@@ -31,6 +33,10 @@
   &:focus-visible {
     outline: 3px solid currentColor;
     outline-offset: 3px;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -47,7 +53,7 @@
   flex-direction: column;
   align-items: stretch;
   position: fixed;
-  top: 60px;
+  top: 3.75rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -55,6 +61,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   overscroll-behavior: contain;
+  padding-right: 1rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    width: auto;
+    background-color: transparent;
+    overflow: visible;
+  }
 }
 
 .engine-navbar__nav.engine-navbar--open {
@@ -67,44 +84,30 @@
   padding: 0;
   list-style: none;
   text-align: right;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
 
 .engine-navbar__item {
   border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
 }
 
 .engine-navbar__item a {
   display: block;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   color: inherit;
 }
 
 @media (min-width: 768px) {
   .engine-navbar {
     position: static;
-  }
-
-  .engine-navbar__toggle {
-    display: none;
-  }
-
-  .engine-navbar__nav {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    box-shadow: none;
-    width: auto;
-    background-color: transparent;
-    overflow: visible;
-  }
-
-  .engine-navbar__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .engine-navbar__item {
-    border-bottom: none;
   }
 }
