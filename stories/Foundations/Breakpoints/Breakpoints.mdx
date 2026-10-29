@@ -1,0 +1,16 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as BreakpointsStories from "./Breakpoints.stories";
+
+<Meta of={BreakpointsStories} name="Docs" />
+
+# Breakpoints
+
+Layouts are mobile first: base styles are for small screens and `min-width`
+queries add to them. Custom properties cannot be used inside `@media`, so the
+breakpoints are `@custom-media` rules in `_breakpoints.css`, resolved at build
+time by `postcss-custom-media`. Write `@media (--sm)` and change the value in
+one place.
+
+`--max-width` caps the width of page content.
+
+<Canvas of={BreakpointsStories.Default} />

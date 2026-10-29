@@ -1,4 +1,5 @@
 import type { StoryObj } from "@storybook/nextjs-vite";
+import { TokenTable, tokensMatching } from "@/stories/Foundations/tokens";
 
 function TypographySamples() {
   return (
@@ -48,3 +49,28 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const Scale: Story = {
+  render: () => (
+    <>
+      <h2>Sizes</h2>
+      <TokenTable
+        tokens={tokensMatching("text-[a-z0-9]+")}
+        preview={(name) => (
+          <span style={{ fontSize: `var(${name})` }}>The quick brown fox</span>
+        )}
+      />
+      <h2>Weights</h2>
+      <TokenTable
+        tokens={tokensMatching("weight-[a-z]+")}
+        preview={(name) => (
+          <span style={{ fontWeight: `var(${name})` }}>
+            The quick brown fox
+          </span>
+        )}
+      />
+      <h2>Line height</h2>
+      <TokenTable tokens={tokensMatching("leading-[a-z]+")} />
+    </>
+  ),
+};

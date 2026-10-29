@@ -5,10 +5,10 @@
     cursor: pointer;
     border: 0;
     border-radius: var(--radius);
-    padding: 1rem 2rem;
+    padding: var(--space-md) var(--space-xl);
     text-transform: uppercase;
-    font-weight: 900;
-    font-size: 1rem;
+    font-weight: var(--weight-black);
+    font-size: var(--text-md);
     background-color: var(--primary);
     color: var(--bg);
     font-family: var(--font-heading);
@@ -17,19 +17,19 @@
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        transform: translateY(-0.25rem);
+        transform: translateY(calc(var(--space-xs) * -1));
       }
     }
   }
 
   .engine-button--small {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-xs);
   }
 
   .engine-button--large {
-    padding: 1.5rem 3rem;
-    font-size: 1.25rem;
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: var(--text-xl);
   }
 
   .engine-button--secondary {

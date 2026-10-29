@@ -1,9 +1,17 @@
+import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/nextjs-vite";
 
 import "@/EngineDS/main.css";
 import "./preview.css";
 
 const preview: Preview = {
+  decorators: [
+    withThemeByClassName({
+      themes: { light: "engine--t-light", dark: "engine--t-dark" },
+      defaultTheme: "light",
+    }),
+  ],
+
   parameters: {
     controls: {
       matchers: {

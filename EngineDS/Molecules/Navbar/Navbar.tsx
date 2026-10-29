@@ -27,7 +27,7 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
   }, []);
 
   return (
-    <div className={`engine-navbar engine--t-${theme}`}>
+    <div className={joinClasses("engine-navbar", `engine--t-${theme}`)}>
       {title && <span className="engine-navbar__title">{title}</span>}
       <button
         type="button"

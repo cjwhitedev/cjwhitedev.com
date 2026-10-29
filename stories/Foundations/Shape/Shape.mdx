@@ -1,0 +1,15 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as ShapeStories from "./Shape.stories";
+
+<Meta of={ShapeStories} name="Docs" />
+
+# Shape
+
+`--radius` is the signature shape: three large corners and one small one. Use it
+for every rounded surface, including buttons, cards and code blocks. It is the
+only radius.
+
+`--stroke` is the 3px weight for focus rings, outlines and dividers. The design
+is flat, so there are no shadows.
+
+<Canvas of={ShapeStories.Default} />

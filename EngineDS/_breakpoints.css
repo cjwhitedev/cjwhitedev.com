@@ -1,0 +1,3 @@
+/* Mobile first: use as `@media (--sm)`. Resolved at build time by postcss-custom-media. */
+@custom-media --sm (min-width: 768px);
+@custom-media --md (min-width: 1024px);

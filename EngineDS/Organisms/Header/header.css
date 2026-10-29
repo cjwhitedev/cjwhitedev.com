@@ -1,9 +1,9 @@
 @layer components {
   .engine-header {
     position: relative;
-    z-index: 1000;
+    z-index: var(--z-header);
     height: var(--header-height);
-    --header-height: calc(var(--navbar-height) + 1rem);
+    --header-height: calc(var(--navbar-height) + var(--space-md));
 
     .engine-navbar__nav {
       inset-block-start: var(--header-height);

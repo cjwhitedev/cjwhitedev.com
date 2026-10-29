@@ -1,0 +1,14 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as ColorsStories from "./Colors.stories";
+
+<Meta of={ColorsStories} name="Docs" />
+
+# Colors
+
+Four brand colors make up the palette. Themes map them to roles, so components
+use `--bg`, `--fg`, `--primary` and `--secondary` rather than palette names.
+
+Solid colors only: no tints or gradients. Each theme swaps the roles, so the
+same component works in light and dark.
+
+<Canvas of={ColorsStories.Default} />

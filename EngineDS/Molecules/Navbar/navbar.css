@@ -3,19 +3,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 0.5rem;
-    padding-inline-start: 1rem;
-    height: calc(var(--navbar-height) - 1rem);
+    padding-block: var(--space-sm);
+    padding-inline-start: var(--space-md);
+    height: calc(var(--navbar-height) - var(--space-md));
 
-    @media (min-width: 768px) {
+    @media (--sm) {
       position: static;
     }
   }
 
   .engine-navbar__title {
     font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-md);
   }
 
   .engine-navbar__toggle {
@@ -27,10 +27,10 @@
     padding: 10px;
     color: inherit;
     background: transparent;
-    border: 1px solid currentcolor;
+    border: var(--stroke) solid currentcolor;
     border-radius: 6px;
     cursor: pointer;
-    margin-inline-end: 1rem;
+    margin-inline-end: var(--space-md);
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -43,7 +43,7 @@
       outline-offset: var(--focus-offset);
     }
 
-    @media (min-width: 768px) {
+    @media (--sm) {
       display: none;
     }
   }
@@ -64,16 +64,14 @@
     inset-block: var(--navbar-height) 0;
     inset-inline: 0;
     background-color: inherit;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
     overflow-y: auto;
     overscroll-behavior: contain;
-    padding-inline-end: 1rem;
+    padding-inline-end: var(--space-md);
 
-    @media (min-width: 768px) {
+    @media (--sm) {
       display: flex;
       position: static;
       flex-direction: row;
-      box-shadow: none;
       width: auto;
       background-color: transparent;
       overflow: visible;
@@ -91,7 +89,7 @@
     list-style: none;
     text-align: end;
 
-    @media (min-width: 768px) {
+    @media (--sm) {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
@@ -99,16 +97,17 @@
   }
 
   .engine-navbar__item {
-    border-bottom: 1px solid color-mix(in srgb, currentcolor 16%, transparent);
+    border-bottom: var(--stroke) solid
+      color-mix(in srgb, currentcolor 16%, transparent);
 
-    @media (min-width: 768px) {
+    @media (--sm) {
       border-bottom: none;
     }
   }
 
   .engine-navbar__item a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: var(--space-sm) var(--space-md);
     color: inherit;
   }
 }

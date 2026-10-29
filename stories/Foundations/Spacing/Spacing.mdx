@@ -1,0 +1,12 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as SpacingStories from "./Spacing.stories";
+
+<Meta of={SpacingStories} name="Docs" />
+
+# Spacing
+
+One scale for padding, gaps and margins. Steps are in `rem`, so spacing follows
+the reader's font size. Layout's `gap` and `padding` options use these steps:
+small is `xs` or `sm`, medium is `md` and large is `2xl`.
+
+<Canvas of={SpacingStories.Default} />

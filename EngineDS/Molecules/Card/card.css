@@ -21,7 +21,7 @@
   }
 
   .engine-card__content {
-    padding: 1rem;
+    padding: var(--space-md);
   }
 
   .engine-card--linked {
@@ -30,7 +30,7 @@
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        transform: translateY(-0.25rem);
+        transform: translateY(calc(var(--space-xs) * -1));
       }
     }
   }
@@ -38,7 +38,7 @@
   .engine-card__link {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: var(--z-raised);
     text-decoration: none;
     --focus-offset: calc(var(--stroke) * -1);
   }

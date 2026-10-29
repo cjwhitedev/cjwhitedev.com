@@ -1,0 +1,14 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as MotionStories from "./Motion.stories";
+
+<Meta of={MotionStories} name="Docs" />
+
+# Motion
+
+Transitions use one duration and one easing so everything feels related. When
+the reader prefers reduced motion, `--duration` becomes `0s` and every
+transition that uses it stops without any per-component code.
+
+`--focus-offset` is the gap between an element and its focus ring.
+
+<Canvas of={MotionStories.Default} />
