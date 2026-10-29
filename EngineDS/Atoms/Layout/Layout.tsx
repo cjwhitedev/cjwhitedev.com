@@ -80,12 +80,11 @@ export const LayoutItem = ({
   children,
   columnStart = "1",
 }: LayoutItemProps) => {
-  // return <div className="engine-layout-item">{children}</div>;
   return (
     <div
       className={[
-        "engine-layout-item",
-        `engine-layout-item--cs-${columnStart}`,
+        "engine-layout__item",
+        `engine-layout__item--cs-${columnStart}`,
       ].join(" ")}
     >
       {children}

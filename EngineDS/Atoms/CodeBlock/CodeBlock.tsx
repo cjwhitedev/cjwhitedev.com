@@ -6,8 +6,8 @@ export interface CodeBlockProps {
 
 export function CodeBlock({ code }: CodeBlockProps) {
   return (
-    <div className="engine-codeblock__wrapper">
-      <pre className={`engine-codeblock`}>
+    <div className="engine-codeblock">
+      <pre className="engine-codeblock__pre">
         <code>{code}</code>
       </pre>
     </div>

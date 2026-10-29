@@ -1,4 +1,10 @@
 .engine-codeblock {
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+}
+
+.engine-codeblock__pre {
   background-color: var(--near-black);
   color: var(--near-white);
   padding: 1rem;
@@ -7,10 +13,4 @@
   width: calc(100% - 2rem);
   margin: 0;
   display: inline-table;
-}
-
-.engine-codeblock__wrapper {
-  width: 100%;
-  overflow-y: auto;
-  display: flex;
 }

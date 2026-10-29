@@ -1,9 +1,13 @@
-.engine-navbar__container {
+.engine-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 0 0.5rem 1rem;
   height: calc(3.75rem - 1rem);
+
+  @media (min-width: 768px) {
+    position: static;
+  }
 }
 
 .engine-navbar__title {
@@ -74,7 +78,7 @@
   }
 }
 
-.engine-navbar__nav.engine-navbar--open {
+.engine-navbar__nav--open {
   display: flex;
 }
 
@@ -104,10 +108,4 @@
   display: block;
   padding: 0.5rem 1rem;
   color: inherit;
-}
-
-@media (min-width: 768px) {
-  .engine-navbar {
-    position: static;
-  }
 }

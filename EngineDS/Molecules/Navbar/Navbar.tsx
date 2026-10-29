@@ -25,9 +25,7 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
   }, []);
 
   return (
-    <div
-      className={`engine-navbar engine-navbar__container engine--t-${theme}`}
-    >
+    <div className={`engine-navbar engine--t-${theme}`}>
       {title && <span className="engine-navbar__title">{title}</span>}
       <button
         type="button"
@@ -41,7 +39,7 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
         <span className="engine-navbar__toggle-bar"></span>
       </button>
       <nav
-        className={`engine-navbar__nav${isOpen ? " engine-navbar--open" : ""}`}
+        className={`engine-navbar__nav${isOpen ? " engine-navbar__nav--open" : ""}`}
       >
         <ul className="engine-navbar__list">
           {links.map((link) => (

@@ -10,14 +10,14 @@
     padding-bottom: 0.5rem;
   }
 
-  .engine-header__container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .engine-navbar__nav {
     top: 4.75rem;
   }
+}
+
+.engine-header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
