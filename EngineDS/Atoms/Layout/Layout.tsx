@@ -1,3 +1,4 @@
+import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
 import "./layout.css";
 
 export const LAYOUT_OPTIONS = [
@@ -17,7 +18,7 @@ export type LayoutOption = (typeof LAYOUT_OPTIONS)[number];
 export interface LayoutProps {
   children: React.ReactNode;
   layout?: LayoutOption | LayoutOption[];
-  theme?: "light" | "dark";
+  theme?: EngineTheme;
   gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";
   align?: "start" | "center" | "end";

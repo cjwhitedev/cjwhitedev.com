@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import "./navbar.css";
+import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
 import { Anchor, type AnchorProps } from "@/EngineDS/Atoms/Anchor/Anchor";
 
 export interface NavbarProps {
   links: AnchorProps[];
-  theme?: "light" | "dark";
+  theme?: EngineTheme;
   title?: string;
 }
 

@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Card, CardProps } from "@/EngineDS/Molecules/Card/Card";
 
 import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
-import { JSX } from "react/jsx-runtime";
 
 const meta = {
   title: "Engine DS/Molecules/Card",

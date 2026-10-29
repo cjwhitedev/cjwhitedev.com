@@ -3,7 +3,7 @@ import LogoSvg from "./logo.svg?react";
 import "./logo.css";
 
 export interface LogoProps extends Omit<SVGProps<SVGSVGElement>, "color"> {
-  color?: "inherit" | "primary" | "secondary" | "tertiary";
+  color?: "inherit" | "primary" | "secondary";
 }
 
 export function Logo({ color, className, ...props }: LogoProps) {

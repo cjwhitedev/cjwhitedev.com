@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-const colors = ["primary", "secondary", "tertiary"] as const;
+const colors = ["primary", "secondary"] as const;
 
 export const ColorOptions: Story = {
   render: () => (
