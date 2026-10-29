@@ -1,16 +1,9 @@
 @layer components {
   .engine-header {
-    display: flex;
-    justify-content: center;
     position: relative;
     z-index: 1000;
     height: var(--header-height);
     --header-height: calc(var(--navbar-height) + 1rem);
-
-    .engine-wrapper {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
 
     .engine-navbar__nav {
       inset-block-start: var(--header-height);

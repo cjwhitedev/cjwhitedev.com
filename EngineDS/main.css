@@ -16,20 +16,3 @@
     color: var(--fg);
   }
 }
-
-@layer components {
-  .engine-wrapper {
-    display: flex;
-    width: 100%;
-    max-width: var(--max-width);
-    justify-content: center;
-    align-items: center;
-    padding: 0.75rem 1.5rem;
-    flex-direction: column;
-    position: relative;
-
-    @media (min-width: 768px) {
-      padding: 1.5rem 3rem;
-    }
-  }
-}

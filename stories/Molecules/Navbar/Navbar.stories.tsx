@@ -30,9 +30,9 @@ export const Default: Story = {
   args: {
     title: "Navbar Demo",
     links: [
-      { children: "Home", href: "/" },
-      { children: "About", href: "/about" },
-      { children: "Contact", href: "/contact" },
+      { id: "home-navbar", children: "Home", href: "/" },
+      { id: "about-navbar", children: "About", href: "/about" },
+      { id: "contact-navbar", children: "Contact", href: "/contact" },
     ],
   },
 };
@@ -42,9 +42,9 @@ export const Theme: Story = {
     title: "Navbar Demo",
     theme: "light",
     links: [
-      { children: "Home", href: "/" },
-      { children: "About", href: "/about" },
-      { children: "Contact", href: "/contact" },
+      { id: "home-navbar", children: "Home", href: "/" },
+      { id: "about-navbar", children: "About", href: "/about" },
+      { id: "contact-navbar", children: "Contact", href: "/contact" },
     ],
   },
 };

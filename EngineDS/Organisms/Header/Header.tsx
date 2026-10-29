@@ -1,4 +1,5 @@
 import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
+import { Layout } from "@/EngineDS/Atoms/Layout/Layout";
 import { Logo } from "@/EngineDS/Atoms/Logo/Logo";
 import { Navbar, type NavbarProps } from "@/EngineDS/Molecules/Navbar/Navbar";
 import "./header.css";
@@ -11,7 +12,7 @@ export interface HeaderProps {
 export const Header = ({ links, theme = "dark" }: HeaderProps) => {
   return (
     <header className={`engine--t-${theme} engine-header`}>
-      <div className="engine-wrapper">
+      <Layout theme={theme} padding="small">
         <div className="engine-header__container">
           <div className="engine-header__logo">
             <Anchor href={`/`} aria-label="CJ White DEV home">
@@ -20,7 +21,7 @@ export const Header = ({ links, theme = "dark" }: HeaderProps) => {
           </div>
           <Navbar links={links} theme={theme} />
         </div>
-      </div>
+      </Layout>
     </header>
   );
 };

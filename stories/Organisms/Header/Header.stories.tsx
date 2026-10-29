@@ -18,10 +18,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     links: [
-      { children: "Portfolio", href: "/" },
-      { children: "GitHub", href: "/" },
-      { children: "Resume", href: "/" },
-      { children: "Contact", href: "/" },
+      { id: "portfolio-header", children: "Portfolio", href: "/" },
+      { id: "github-header", children: "GitHub", href: "/" },
+      { id: "resume-header", children: "Resume", href: "/" },
+      { id: "contact-header", children: "Contact", href: "/" },
     ],
   },
 };
@@ -30,10 +30,10 @@ export const Theme: Story = {
   args: {
     theme: "light",
     links: [
-      { children: "Portfolio", href: "/" },
-      { children: "GitHub", href: "/" },
-      { children: "Resume", href: "/" },
-      { children: "Contact", href: "/" },
+      { id: "portfolio-header", children: "Portfolio", href: "/" },
+      { id: "github-header", children: "GitHub", href: "/" },
+      { id: "resume-header", children: "Resume", href: "/" },
+      { id: "contact-header", children: "Contact", href: "/" },
     ],
   },
 };
