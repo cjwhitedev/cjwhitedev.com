@@ -12,7 +12,7 @@ export interface HeaderProps {
 
 export const Header = ({ links, theme = "dark" }: HeaderProps) => {
   return (
-    <header className={`engine--t-${theme} engine-header`}>
+    <header className="engine-header">
       <Layout theme={theme} padding="small">
         <div className="engine-header__container">
           <div className="engine-header__logo">
