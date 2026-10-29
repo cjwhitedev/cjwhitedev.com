@@ -15,6 +15,31 @@
   --secondary: var(--orange);
 
   --max-width: 55rem;
+
+  --font-heading: var(--font-open-sans, "Trebuchet MS", sans-serif);
+  --font-body: var(
+    --font-lora,
+    "Lora",
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif
+  );
+
+  --radius: 1rem 1rem 0.25rem 1rem;
+  --stroke: 3px;
+  --focus-offset: var(--stroke);
+
+  --duration: 0.2s;
+  --easing: ease-in-out;
+
+  --navbar-height: 3.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration: 0s;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {

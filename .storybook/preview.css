@@ -9,7 +9,7 @@ body.sb-main-fullscreen {
   h4,
   h5,
   h6 {
-    font-family: var(--font-open-sans, "Trebuchet MS", sans-serif);
+    font-family: var(--font-heading);
     line-height: 1.2;
     margin: 0 0 0.65em;
   }
@@ -18,7 +18,7 @@ body.sb-main-fullscreen {
   li,
   blockquote {
     font-size: 1rem;
-    font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+    font-family: var(--font-body);
     line-height: 1.65;
   }
 }

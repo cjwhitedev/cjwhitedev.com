@@ -1,5 +1,5 @@
 body {
-  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-open-sans, "Trebuchet MS", sans-serif);
+  font-family: var(--font-heading);
   line-height: 1.2;
   margin: 0 0 0.65em;
 }
@@ -42,7 +42,7 @@ h6 {
 p,
 li,
 blockquote {
-  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-body);
   line-height: 1.65;
 }
 
@@ -57,5 +57,5 @@ p {
 blockquote {
   margin: 1.5em 0;
   padding-inline-start: 1em;
-  border-inline-start: 3px solid var(--secondary);
+  border-inline-start: var(--stroke) solid var(--secondary);
 }

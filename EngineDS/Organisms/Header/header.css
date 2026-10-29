@@ -3,7 +3,8 @@
   justify-content: center;
   position: relative;
   z-index: 1000;
-  height: 76px;
+  --header-height: calc(var(--navbar-height) + 1rem);
+  height: var(--header-height);
 
   .engine-wrapper {
     padding-top: 0.5rem;
@@ -11,7 +12,7 @@
   }
 
   .engine-navbar__nav {
-    top: 4.75rem;
+    inset-block-start: var(--header-height);
   }
 }
 
