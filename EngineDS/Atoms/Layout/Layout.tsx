@@ -1,4 +1,8 @@
 import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
+import {
+  joinClasses,
+  nonDefaultModifier,
+} from "@/EngineDS/_Foundations/classes";
 import "./layout.css";
 
 export const LAYOUT_OPTIONS = [
@@ -34,10 +38,6 @@ const DEFAULTS = {
   valign: "start",
 } as const;
 
-// Returns the modifier class, or undefined if the value is the default
-const modifier = (prefix: string, value: string, defaultValue: string) =>
-  value === defaultValue ? undefined : `${prefix}${value}`;
-
 export const Layout = ({
   children,
   layout = DEFAULTS.layout,
@@ -49,21 +49,21 @@ export const Layout = ({
 }: LayoutProps) => {
   const layouts = Array.isArray(layout) ? layout : [layout];
 
-  const containerClasses = [
+  const containerClasses = joinClasses(
     "engine-layout__container",
     `engine--t-${theme}`,
-  ].join(" ");
+  );
 
-  const layoutClasses = [
+  const layoutClasses = joinClasses(
     "engine-layout",
-    modifier("engine-layout--g-", gap, DEFAULTS.gap),
-    modifier("engine-layout--p-", padding, DEFAULTS.padding),
-    modifier("engine-layout--a-", align, DEFAULTS.align),
-    modifier("engine-layout--v-", valign, DEFAULTS.valign),
-    ...layouts.map((l) => modifier("engine-layout--l-", l, DEFAULTS.layout)),
-  ]
-    .filter(Boolean)
-    .join(" ");
+    nonDefaultModifier("engine-layout--g-", gap, DEFAULTS.gap),
+    nonDefaultModifier("engine-layout--p-", padding, DEFAULTS.padding),
+    nonDefaultModifier("engine-layout--a-", align, DEFAULTS.align),
+    nonDefaultModifier("engine-layout--v-", valign, DEFAULTS.valign),
+    ...layouts.map((l) =>
+      nonDefaultModifier("engine-layout--l-", l, DEFAULTS.layout),
+    ),
+  );
 
   return (
     <div className={containerClasses}>
@@ -83,10 +83,10 @@ export const LayoutItem = ({
 }: LayoutItemProps) => {
   return (
     <div
-      className={[
+      className={joinClasses(
         "engine-layout__item",
         `engine-layout__item--cs-${columnStart}`,
-      ].join(" ")}
+      )}
     >
       {children}
     </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
+import { joinClasses } from "@/EngineDS/_Foundations/classes";
 import "./card.css";
 
 export type CardProps = {
@@ -11,16 +12,20 @@ export type CardProps = {
   href?: string;
 };
 
-export function Card({
+export const Card = ({
   children,
   teasersrc,
   teaseralt,
   theme = "dark",
   href,
-}: CardProps) {
+}: CardProps) => {
   return (
     <div
-      className={`engine-card engine--t-${theme} ${href ? "engine-card--linked" : ""}`}
+      className={joinClasses(
+        "engine-card",
+        `engine--t-${theme}`,
+        href && "engine-card--linked",
+      )}
     >
       <div className="engine-card__teaser">
         <Image src={teasersrc} alt={teaseralt} width={380} height={285} />
@@ -29,4 +34,4 @@ export function Card({
       {href && <Anchor href={href} className="engine-card__link" />}
     </div>
   );
-}
+};

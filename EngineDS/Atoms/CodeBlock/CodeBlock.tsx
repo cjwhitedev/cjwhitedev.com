@@ -4,7 +4,7 @@ export interface CodeBlockProps {
   code: string;
 }
 
-export function CodeBlock({ code }: CodeBlockProps) {
+export const CodeBlock = ({ code }: CodeBlockProps) => {
   return (
     <div className="engine-codeblock">
       <pre className="engine-codeblock__pre">
@@ -12,4 +12,4 @@ export function CodeBlock({ code }: CodeBlockProps) {
       </pre>
     </div>
   );
-}
+};

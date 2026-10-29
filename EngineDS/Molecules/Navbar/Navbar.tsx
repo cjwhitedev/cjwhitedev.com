@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "./navbar.css";
+import { joinClasses } from "@/EngineDS/_Foundations/classes";
 import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
 import { Anchor, type AnchorProps } from "@/EngineDS/Atoms/Anchor/Anchor";
 
@@ -40,7 +41,10 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
         <span className="engine-navbar__toggle-bar"></span>
       </button>
       <nav
-        className={`engine-navbar__nav${isOpen ? " engine-navbar__nav--open" : ""}`}
+        className={joinClasses(
+          "engine-navbar__nav",
+          isOpen && "engine-navbar__nav--open",
+        )}
       >
         <ul className="engine-navbar__list">
           {links.map((link) => (

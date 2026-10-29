@@ -6,7 +6,7 @@ export type FooterProps = {
   links: AnchorProps[];
 };
 
-export function Footer({ links }: FooterProps) {
+export const Footer = ({ links }: FooterProps) => {
   return (
     <div className="engine-footer">
       <Layout theme="dark" layout="halves-from-small">
@@ -28,4 +28,4 @@ export function Footer({ links }: FooterProps) {
       </Layout>
     </div>
   );
-}
+};

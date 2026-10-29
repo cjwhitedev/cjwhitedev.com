@@ -1,26 +1,25 @@
 import type { ComponentProps } from "react";
 import Link from "next/link";
+import { joinClasses } from "@/EngineDS/_Foundations/classes";
 import "./anchor.css";
 
 export type AnchorProps = ComponentProps<typeof Link> & {
   reversedUnderline?: boolean;
 };
 
-export function Anchor({
+export const Anchor = ({
   className,
   reversedUnderline,
   ...props
-}: AnchorProps) {
+}: AnchorProps) => {
   return (
     <Link
-      className={[
+      className={joinClasses(
         "engine-anchor",
         reversedUnderline && "engine-anchor--reversed-underline",
         className,
-      ]
-        .filter(Boolean)
-        .join(" ")}
+      )}
       {...props}
     />
   );
-}
+};

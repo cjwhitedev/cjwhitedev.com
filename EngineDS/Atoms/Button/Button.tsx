@@ -1,4 +1,8 @@
 import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
+import {
+  joinClasses,
+  nonDefaultModifier,
+} from "@/EngineDS/_Foundations/classes";
 import "./button.css";
 
 export interface ButtonProps {
@@ -17,33 +21,23 @@ export const Button = ({
   href,
   ...props
 }: ButtonProps) => {
+  const className = joinClasses(
+    "engine-button",
+    nonDefaultModifier("engine-button--", hierarchy, "primary"),
+    nonDefaultModifier("engine-button--", size, "medium"),
+  );
+
   if (href) {
     return (
-      <Anchor
-        href={href}
-        className={[
-          "engine-button",
-          hierarchy !== "primary" ? `engine-button--${hierarchy}` : ``,
-          size !== "medium" ? `engine-button--${size}` : ``,
-        ].join(" ")}
-        {...props}
-      >
+      <Anchor href={href} className={className} {...props}>
         <>{label}</>
       </Anchor>
     );
-  } else {
-    return (
-      <button
-        type="button"
-        className={[
-          "engine-button",
-          hierarchy !== "primary" ? `engine-button--${hierarchy}` : ``,
-          size !== "medium" ? `engine-button--${size}` : ``,
-        ].join(" ")}
-        {...props}
-      >
-        {label}
-      </button>
-    );
   }
+
+  return (
+    <button type="button" className={className} {...props}>
+      {label}
+    </button>
+  );
 };
