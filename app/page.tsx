@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <Header
       links={[
-        { label: "Portfolio", href: "/portfolio" },
-        { label: "GitHub", href: "/github" },
-        { label: "Resume", href: "/resume" },
-        { label: "Contact", href: "/contact" },
+        { children: "Portfolio", href: "/portfolio" },
+        { children: "GitHub", href: "/github" },
+        { children: "Resume", href: "/resume" },
+        { children: "Contact", href: "/contact" },
       ]}
     />
   );

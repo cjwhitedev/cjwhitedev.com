@@ -1,4 +1,6 @@
-.engine-footer__list {
-  margin: 0;
-  padding-inline-start: 1rem;
+@layer components {
+  .engine-footer__list {
+    margin: 0;
+    padding-inline-start: 1rem;
+  }
 }

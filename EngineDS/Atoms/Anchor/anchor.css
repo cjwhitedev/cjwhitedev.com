@@ -1,30 +1,32 @@
-.engine-anchor {
-  color: var(--primary);
-  text-decoration-color: inherit;
-  text-decoration-thickness: 0.12rem;
+@layer components {
+  .engine-anchor {
+    color: var(--primary);
+    text-decoration-color: inherit;
+    text-decoration-thickness: 0.12rem;
 
-  svg {
-    color: var(--fg);
-  }
+    svg {
+      color: var(--fg);
+    }
 
-  &:focus-visible {
-    outline: var(--stroke) solid var(--primary);
-    outline-offset: var(--focus-offset);
-  }
+    &:focus-visible {
+      outline: var(--stroke) solid var(--primary);
+      outline-offset: var(--focus-offset);
+    }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      text-decoration: none;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
-}
 
-.engine-anchor--reversed-underline {
-  text-decoration: none;
+  .engine-anchor--reversed-underline {
+    text-decoration: none;
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      text-decoration: underline;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

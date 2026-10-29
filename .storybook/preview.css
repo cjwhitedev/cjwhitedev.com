@@ -1,4 +1,4 @@
-@import "../EngineDS/_vars.css";
+@import "../EngineDS/_vars.css" layer(tokens);
 
 body.sb-main-fullscreen {
   background-color: #fff;

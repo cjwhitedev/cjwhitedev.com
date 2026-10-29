@@ -1,14 +1,16 @@
-.engine-logo {
-  display: block;
-  width: 195px;
-  height: auto;
-  color: inherit;
-}
+@layer components {
+  .engine-logo {
+    display: block;
+    width: 195px;
+    height: auto;
+    color: inherit;
+  }
 
-.engine-logo--primary {
-  color: var(--primary);
-}
+  .engine-logo--primary {
+    color: var(--primary);
+  }
 
-.engine-logo--secondary {
-  color: var(--secondary);
+  .engine-logo--secondary {
+    color: var(--secondary);
+  }
 }
