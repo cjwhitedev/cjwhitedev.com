@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
 
+import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 import { Card } from "@/EngineDS/Molecules/Card/Card";
 
 const meta = {
@@ -71,7 +72,7 @@ export const LayoutThirds: Story = {
   },
 };
 
-const themes = ["light", "dark"] as const;
+const themes = ["white", "light", "dark", "dark-alt", "dark-plum"] as const;
 
 export const Themes: Story = {
   args: {
@@ -82,7 +83,9 @@ export const Themes: Story = {
           <p>Layout Item 1.</p>
         </LayoutItem>
         <LayoutItem>
-          <p>Layout Item 2.</p>
+          <p>
+            Layout Item 2 with a <Anchor href="/">link</Anchor>.
+          </p>
         </LayoutItem>
       </>
     ),
@@ -90,9 +93,7 @@ export const Themes: Story = {
   render: (args) => (
     <>
       {themes.map((theme) => (
-        <div key={theme} data-theme={theme}>
-          <Layout theme={theme} {...args} />
-        </div>
+        <Layout key={theme} {...args} theme={theme} />
       ))}
     </>
   ),

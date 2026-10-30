@@ -31,7 +31,6 @@ const meta = {
 } satisfies Meta<typeof Button>;
 
 export default meta;
-// 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {

@@ -1,23 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./navbar.css";
 import { joinClasses } from "@/EngineDS/_Foundations/classes";
-import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
+import { themeClass, type EngineTheme } from "@/EngineDS/_Foundations/themes";
 import { Anchor, type AnchorProps } from "@/EngineDS/Atoms/Anchor/Anchor";
 
 export interface NavbarProps {
   links: AnchorProps[];
-  theme?: EngineTheme;
+  theme?: EngineTheme | "inherit";
   title?: string;
 }
 
-export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
+export const Navbar = ({ links, theme = "dark-alt", title }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const closeOnDesktop = () => {
-      if (window.matchMedia("(min-width: 768px)").matches) {
+      // The toggle is hidden by CSS once the menu is always visible
+      if (
+        toggleRef.current &&
+        getComputedStyle(toggleRef.current).display === "none"
+      ) {
         setIsOpen(false);
       }
     };
@@ -27,9 +32,10 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
   }, []);
 
   return (
-    <div className={joinClasses("engine-navbar", `engine--t-${theme}`)}>
+    <div className={joinClasses("engine-navbar", themeClass(theme))}>
       {title && <span className="engine-navbar__title">{title}</span>}
       <button
+        ref={toggleRef}
         type="button"
         className="engine-navbar__toggle"
         aria-label="Toggle navigation"
@@ -49,12 +55,7 @@ export const Navbar = ({ links, theme = "dark", title }: NavbarProps) => {
         <ul className="engine-navbar__list">
           {links.map((link) => (
             <li key={link.id} className="engine-navbar__item">
-              <Anchor
-                href={link.href}
-                reversedUnderline={link.reversedUnderline}
-              >
-                {link.children}
-              </Anchor>
+              <Anchor {...link} />
             </li>
           ))}
         </ul>

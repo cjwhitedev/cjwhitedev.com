@@ -22,3 +22,22 @@ Pass a link through the `href` prop to render the card with a link. Note that li
 ## Use Case Layout Thirds
 
 <Canvas of={CardStories.UseCaseLayoutThirds} />
+
+## Use Case Contrast
+
+Cards default to the `contrast` theme. It picks the dark theme furthest from the
+theme around it, so a card always stands out without a hard flip to light. Each
+row below is a Layout in the theme named on its cards.
+
+- On `white` and `light`, the card becomes `dark-alt`.
+- On `dark-alt` and `dark-plum`, the card becomes `dark`.
+- On `dark`, the card becomes `dark-plum`.
+
+Pass any other theme to the `theme` prop to opt out.
+
+<Canvas of={CardStories.UseCaseContrast} />
+
+In dark mode `white` and `light` become `dark-alt` and `dark-plum`, so the cards
+step to `dark` rather than jumping to a light color.
+
+<Canvas of={CardStories.UseCaseContrastDarkMode} />

@@ -44,6 +44,12 @@ export const Default: Story = {
 };
 
 export const ReversedUnderline: Story = {
+  parameters: {
+    // Demo only: this variant is meant for standalone links, not inline text
+    a11y: {
+      config: { rules: [{ id: "link-in-text-block", enabled: false }] },
+    },
+  },
   args: {
     href: "/",
     children: "ipsum",

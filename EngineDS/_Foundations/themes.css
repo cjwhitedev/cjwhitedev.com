@@ -1,19 +1,107 @@
+.engine--t-white,
 .engine--t-light {
   --fg: var(--near-black);
-  --bg: var(--near-white);
   --primary: var(--purple);
   --secondary: var(--orange);
+  --contrast-fg: var(--near-white);
+  --contrast-bg: var(--dark-purple);
+  --contrast-primary: var(--orange);
+  --contrast-secondary: var(--purple);
+
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.engine--t-white {
+  --bg: var(--white);
+}
+
+.engine--t-light {
+  --bg: var(--near-white);
+}
+
+.engine--t-dark,
+.engine--t-dark-alt,
+.engine--t-dark-plum {
+  --fg: var(--near-white);
+  --primary: var(--orange);
+  --secondary: var(--purple);
+  --contrast-fg: var(--near-white);
+  --contrast-primary: var(--orange);
+  --contrast-secondary: var(--purple);
 
   background-color: var(--bg);
   color: var(--fg);
 }
 
 .engine--t-dark {
-  --fg: var(--near-white);
   --bg: var(--near-black);
-  --primary: var(--orange);
-  --secondary: var(--purple);
+  --contrast-bg: var(--plum);
+}
+
+.engine--t-dark-alt {
+  --bg: var(--dark-purple);
+  --contrast-bg: var(--near-black);
+}
+
+.engine--t-dark-plum {
+  --bg: var(--plum);
+  --contrast-bg: var(--near-black);
+}
+
+.engine--t-contrast {
+  --fg: var(--contrast-fg);
+  --bg: var(--contrast-bg);
+  --primary: var(--contrast-primary);
+  --secondary: var(--contrast-secondary);
 
   background-color: var(--bg);
   color: var(--fg);
+}
+
+/* Dark mode: white becomes dark-alt and light becomes dark-plum; dark themes stay put */
+.engine--mode-dark,
+.engine--mode-dark .engine--t-white,
+.engine--mode-dark .engine--t-light {
+  color-scheme: dark;
+  --fg: var(--near-white);
+  --primary: var(--orange);
+  --secondary: var(--purple);
+  --contrast-fg: var(--near-white);
+  --contrast-bg: var(--near-black);
+  --contrast-primary: var(--orange);
+  --contrast-secondary: var(--purple);
+}
+
+.engine--mode-dark,
+.engine--mode-dark .engine--t-white {
+  --bg: var(--dark-purple);
+}
+
+.engine--mode-dark .engine--t-light {
+  --bg: var(--plum);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.engine--mode-light),
+  :root:not(.engine--mode-light) .engine--t-white,
+  :root:not(.engine--mode-light) .engine--t-light {
+    color-scheme: dark;
+    --fg: var(--near-white);
+    --primary: var(--orange);
+    --secondary: var(--purple);
+    --contrast-fg: var(--near-white);
+    --contrast-bg: var(--near-black);
+    --contrast-primary: var(--orange);
+    --contrast-secondary: var(--purple);
+  }
+
+  :root:not(.engine--mode-light),
+  :root:not(.engine--mode-light) .engine--t-white {
+    --bg: var(--dark-purple);
+  }
+
+  :root:not(.engine--mode-light) .engine--t-light {
+    --bg: var(--plum);
+  }
 }

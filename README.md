@@ -2,8 +2,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## CJ's TODO
 
-- [ ] set up vite test
-- [ ] get buttons running
+- [x] honor prefers-color-scheme
+- [ ] form controls: input, textarea, checkbox, radio, select
+- [ ] add error color when forms need it
+- [ ] disclosure: accordion, tabs
+- [ ] overlays: dialog, tooltip
+- [ ] navigation: breadcrumbs, pagination
+- [ ] content: table
+- [ ] enforce a11y checks in Storybook
+- [ ] build out homepage once content is ready
 
 ## Getting Started
 

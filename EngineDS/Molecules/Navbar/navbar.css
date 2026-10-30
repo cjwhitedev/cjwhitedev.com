@@ -28,7 +28,7 @@
     color: inherit;
     background: transparent;
     border: var(--stroke) solid currentcolor;
-    border-radius: 6px;
+    border-radius: var(--radius);
     cursor: pointer;
     margin-inline-end: var(--space-md);
 
@@ -97,8 +97,7 @@
   }
 
   .engine-navbar__item {
-    border-bottom: var(--stroke) solid
-      color-mix(in srgb, currentcolor 16%, transparent);
+    border-bottom: var(--stroke) solid currentcolor;
 
     @media (--sm) {
       border-bottom: none;

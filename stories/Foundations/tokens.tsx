@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import varsCss from "@/EngineDS/_vars.css?raw";
 import "./foundations.css";
 
-export type Token = { name: string; value: string };
+export type Token = { name: string; value?: string };
 
 // Reads tokens straight from _vars.css so the docs never duplicate values
 export const tokensMatching = (pattern: string): Token[] => {
@@ -52,7 +52,7 @@ export const Swatches = ({ tokens }: { tokens: Token[] }) => (
       <div key={name} className="fnd-swatch">
         <span style={{ backgroundColor: `var(${name})` }} />
         <code>{name}</code>
-        <code>{value}</code>
+        {value && <code>{value}</code>}
       </div>
     ))}
   </div>

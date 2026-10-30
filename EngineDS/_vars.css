@@ -7,8 +7,11 @@
 
   --near-black: color-mix(in srgb, var(--purple) 40%, black);
   --near-white: color-mix(in srgb, var(--beige) 50%, white);
+  --white: #fff;
+  --dark-purple: color-mix(in srgb, var(--purple) 60%, black);
+  --plum: color-mix(in srgb, var(--purple) 80%, black);
 
-  --bg: var(--near-white);
+  --bg: var(--white);
   --fg: var(--near-black);
 
   --primary: var(--purple);
@@ -69,10 +72,3 @@
     --duration: 0s;
   }
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-      --bg: color-mix(in srgb, var(--purple) 50%, black);
-      --fg: color-mix(in srgb, var(--beige) 50%, white);
-  }
-} */

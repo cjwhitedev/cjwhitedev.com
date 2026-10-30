@@ -11,10 +11,8 @@ const meta = {
 } satisfies Meta<typeof Header>;
 
 export default meta;
-// 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
 
-// 👇 A story named Primary that renders `<Button primary label="Button" />`
 export const Default: Story = {
   args: {
     links: [
@@ -28,7 +26,7 @@ export const Default: Story = {
 
 export const Theme: Story = {
   args: {
-    theme: "light",
+    theme: "white",
     links: [
       { id: "portfolio-header", children: "Portfolio", href: "/" },
       { id: "github-header", children: "GitHub", href: "/" },

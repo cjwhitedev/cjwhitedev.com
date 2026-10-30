@@ -21,3 +21,10 @@ export const Default: Story = {
     ],
   },
 };
+
+export const Theme: Story = {
+  args: {
+    ...Default.args,
+    theme: "dark-plum",
+  },
+};

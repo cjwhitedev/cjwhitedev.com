@@ -17,16 +17,22 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-const colors = ["primary", "secondary"] as const;
+const colors = ["inherit", "primary", "secondary"] as const;
+const themes = ["white", "dark-alt"] as const;
 
 export const ColorOptions: Story = {
+  parameters: { layout: "fullscreen" },
   render: () => (
-    <Layout layout="three-tiles" align="center">
-      {colors.map((color) => (
-        <LayoutItem key={color}>
-          <Logo color={color} />
-        </LayoutItem>
+    <>
+      {themes.map((theme) => (
+        <Layout key={theme} theme={theme} layout="three-tiles" align="center">
+          {colors.map((color) => (
+            <LayoutItem key={color}>
+              <Logo color={color} />
+            </LayoutItem>
+          ))}
+        </Layout>
       ))}
-    </Layout>
+    </>
   ),
 };

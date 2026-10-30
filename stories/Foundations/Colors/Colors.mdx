@@ -8,7 +8,36 @@ import * as ColorsStories from "./Colors.stories";
 Four brand colors make up the palette. Themes map them to roles, so components
 use `--bg`, `--fg`, `--primary` and `--secondary` rather than palette names.
 
-Solid colors only: no tints or gradients. Each theme swaps the roles, so the
-same component works in light and dark.
+## Themes
+
+- `white`: default, for page sections.
+- `light`: alternate with `white` to separate sections.
+- `dark`: header and footer. Stays the same in dark mode.
+- `dark-alt`: occasional contrast on light pages. Replaces `white` in dark mode.
+- `dark-plum`: replaces `light` in dark mode.
+
+Layout and Navbar also accept `inherit`, which adds no theme and uses the
+surrounding one. Header and Footer set their own theme and pass `inherit` down
+to their Layout and Navbar. Card defaults to `contrast`, which
+picks the dark theme furthest from its parent: `dark-alt` on `white` and `light`,
+`dark` on `dark-alt` and `dark-plum`, and `dark-plum` on `dark`.
+
+## Accessibility
+
+Every theme is measured below. Body text must reach 7:1 and links 4.5:1. The
+`--secondary` color is for non-text accents only and is not held to a text
+ratio. The story fails if a theme drops below those minimums, and every
+component story is also checked by axe in each theme.
 
 <Canvas of={ColorsStories.Default} />
+
+## Dark mode
+
+When the visitor prefers a dark color scheme, `white` becomes `dark-alt` and
+`light` becomes `dark-plum`. Themes that are already dark do not change, and
+neither do themes set by hand, so a header stays `dark`. The Storybook theme
+toggle applies the same swap through an `engine--mode-dark` class on the page,
+and `engine--mode-light` forces light regardless of the system setting. The
+panels below are the same ones as above, rendered in dark mode.
+
+<Canvas of={ColorsStories.DarkMode} />

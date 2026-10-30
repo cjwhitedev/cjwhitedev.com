@@ -1,4 +1,4 @@
-import type { EngineTheme } from "@/EngineDS/_Foundations/themes";
+import { themeClass, type EngineTheme } from "@/EngineDS/_Foundations/themes";
 import {
   joinClasses,
   nonDefaultModifier,
@@ -22,7 +22,7 @@ export type LayoutOption = (typeof LAYOUT_OPTIONS)[number];
 export interface LayoutProps {
   children: React.ReactNode;
   layout?: LayoutOption | LayoutOption[];
-  theme?: EngineTheme;
+  theme?: EngineTheme | "inherit";
   gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";
   align?: "start" | "center" | "end";
@@ -31,7 +31,7 @@ export interface LayoutProps {
 
 const DEFAULTS = {
   layout: "full",
-  theme: "light",
+  theme: "white",
   gap: "medium",
   padding: "medium",
   align: "start",
@@ -51,7 +51,7 @@ export const Layout = ({
 
   const containerClasses = joinClasses(
     "engine-layout__container",
-    `engine--t-${theme}`,
+    themeClass(theme),
   );
 
   const layoutClasses = joinClasses(

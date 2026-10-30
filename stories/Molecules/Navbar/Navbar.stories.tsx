@@ -23,7 +23,6 @@ const meta = {
 } satisfies Meta<typeof Navbar>;
 
 export default meta;
-// 👇 Type helper to reduce boilerplate
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -40,7 +39,7 @@ export const Default: Story = {
 export const Theme: Story = {
   args: {
     title: "Navbar Demo",
-    theme: "light",
+    theme: "white",
     links: [
       { id: "home-navbar", children: "Home", href: "/" },
       { id: "about-navbar", children: "About", href: "/about" },
