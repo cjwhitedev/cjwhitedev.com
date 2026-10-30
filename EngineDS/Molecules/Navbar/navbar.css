@@ -22,9 +22,11 @@
     display: grid;
     width: 44px;
     height: 44px;
-    align-content: center;
-    gap: 5px;
-    padding: 10px;
+    place-content: center center;
+    --toggle-gap: 5px;
+
+    gap: var(--toggle-gap);
+    padding: 0;
     color: inherit;
     background: transparent;
     border: var(--stroke) solid currentcolor;
@@ -34,7 +36,7 @@
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        background: color-mix(in srgb, currentcolor 12%, transparent);
+        color: var(--primary);
       }
     }
 
@@ -51,9 +53,27 @@
   .engine-navbar__toggle-bar {
     display: block;
     width: 22px;
-    height: 2px;
-    transition: all var(--duration) var(--easing);
+    height: var(--stroke);
     background-color: currentcolor;
+    transition:
+      transform var(--duration) var(--easing),
+      opacity var(--duration) var(--easing);
+  }
+
+  .engine-navbar__toggle[aria-expanded="true"] {
+    .engine-navbar__toggle-bar:nth-child(1) {
+      transform: translateY(calc(var(--stroke) + var(--toggle-gap)))
+        rotate(45deg);
+    }
+
+    .engine-navbar__toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .engine-navbar__toggle-bar:nth-child(3) {
+      transform: translateY(calc((var(--stroke) + var(--toggle-gap)) * -1))
+        rotate(-45deg);
+    }
   }
 
   .engine-navbar__nav {
@@ -63,7 +83,7 @@
     position: fixed;
     inset-block: var(--navbar-height) 0;
     inset-inline: 0;
-    background-color: inherit;
+    background-color: var(--bg);
     overflow-y: auto;
     overscroll-behavior: contain;
     padding-inline-end: var(--space-md);

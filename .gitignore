@@ -5,4 +5,5 @@ storybook-static
 
 .next
 .eslintcache
-tsconfig.tsbuildinfoout
+tsconfig.tsbuildinfo
+out
