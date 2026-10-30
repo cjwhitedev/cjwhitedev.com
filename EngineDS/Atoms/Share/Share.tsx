@@ -4,6 +4,7 @@ import {
   nonDefaultModifier,
 } from "@/EngineDS/_Foundations/classes";
 import { BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
+import { revealClass } from "@/EngineDS/_Foundations/motion/motion";
 import "./share.css";
 
 const SOURCES = {
@@ -22,6 +23,7 @@ export type ShareProps = {
   sources: ShareSource[];
   size?: "small" | "medium";
   align?: "start" | "center" | "end";
+  animate?: boolean;
 };
 
 export const Share = ({
@@ -29,6 +31,7 @@ export const Share = ({
   sources,
   size = "medium",
   align = "start",
+  animate = true,
 }: ShareProps) => {
   return (
     <div
@@ -36,6 +39,7 @@ export const Share = ({
         "engine-share",
         nonDefaultModifier("engine-share--s-", size, "medium"),
         nonDefaultModifier("engine-share--a-", align, "start"),
+        revealClass(animate),
       )}
     >
       <p className="engine-share__text">{text}</p>

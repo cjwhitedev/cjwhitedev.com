@@ -6,6 +6,7 @@ import {
   type RelativeTheme,
 } from "@/EngineDS/_Foundations/themes";
 import { joinClasses } from "@/EngineDS/_Foundations/classes";
+import { revealClass } from "@/EngineDS/_Foundations/motion/motion";
 import "./card.css";
 
 type CardBaseProps = {
@@ -13,6 +14,7 @@ type CardBaseProps = {
   teasersrc: string;
   teaseralt: string;
   theme?: EngineTheme | RelativeTheme;
+  animate?: boolean;
 };
 
 type CardLinkProps =
@@ -26,6 +28,7 @@ export const Card = ({
   teasersrc,
   teaseralt,
   theme = "contrast",
+  animate = true,
   href,
   linkLabel,
 }: CardProps) => {
@@ -35,6 +38,7 @@ export const Card = ({
         "engine-card",
         themeClass(theme),
         href && "engine-card--linked",
+        revealClass(animate),
       )}
     >
       <div className="engine-card__teaser">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans, Lora } from "next/font/google";
 import "@/EngineDS/main.css";
+import { RevealFallback } from "@/EngineDS/_Foundations/motion/RevealFallback";
+import { SmoothScroll } from "@/EngineDS/_Foundations/motion/SmoothScroll";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -20,7 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${openSans.variable} ${lora.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        <RevealFallback />
+        {children}
+      </body>
     </html>
   );
 }

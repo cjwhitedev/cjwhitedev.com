@@ -26,16 +26,16 @@ export const Footer = ({
   return (
     <footer className={joinClasses("engine-footer", themeClass(theme))}>
       <Layout theme="inherit" layout="halves-from-small" gap="large">
-        <LayoutItem>
+        <LayoutItem animate={false}>
           <h2 className="engine-footer__title">{title}</h2>
           {children}
           {share && (
             <div className="engine-footer__share">
-              <Share {...share} />
+              <Share {...share} animate={false} />
             </div>
           )}
         </LayoutItem>
-        <LayoutItem>
+        <LayoutItem animate={false}>
           <ul className="engine-footer__list">
             {links.map((link) => (
               <li key={link.id}>

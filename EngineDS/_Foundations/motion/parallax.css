@@ -1,0 +1,51 @@
+@layer components {
+  @keyframes engine-parallax {
+    from {
+      transform: translateY(calc(var(--parallax-distance) * -1));
+    }
+
+    to {
+      transform: translateY(var(--parallax-distance));
+    }
+  }
+
+  .engine-parallax {
+    --parallax-distance: var(--space-xl);
+
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: var(--parallax-ratio);
+    border-radius: var(--radius);
+  }
+
+  .engine-parallax--s-subtle {
+    --parallax-distance: var(--space-md);
+  }
+
+  .engine-parallax--s-strong {
+    --parallax-distance: var(--space-2xl);
+  }
+
+  /* Oversized so the layer never uncovers the container while it moves */
+  .engine-parallax__layer {
+    position: absolute;
+    inset-block: calc(var(--parallax-distance) * -1);
+    inset-inline: 0;
+
+    > * {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .engine-parallax__layer {
+        animation: engine-parallax linear both;
+        animation-timeline: view();
+      }
+    }
+  }
+}

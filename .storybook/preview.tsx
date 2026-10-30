@@ -1,11 +1,18 @@
 import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/nextjs-vite";
 
+import { RevealFallback } from "@/EngineDS/_Foundations/motion/RevealFallback";
 import "@/EngineDS/main.css";
 import "./preview.css";
 
 const preview: Preview = {
   decorators: [
+    (Story) => (
+      <>
+        <RevealFallback />
+        <Story />
+      </>
+    ),
     withThemeByClassName({
       themes: { light: "engine--mode-light", dark: "engine--mode-dark" },
       defaultTheme: "light",

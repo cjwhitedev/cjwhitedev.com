@@ -12,3 +12,47 @@ transition that uses it stops without any per-component code.
 `--focus-offset` is the gap between an element and its focus ring.
 
 <Canvas of={MotionStories.Default} />
+
+## Reveal on scroll
+
+Every content component fades in and rises into place as it scrolls into view:
+`Button`, `Card`, `CodeBlock`, `Share` and `LayoutItem`. Set `animate={false}` on
+any of them to turn it off. `Header`, `Navbar`, `Footer` and `Logo` stay still.
+
+<Canvas of={MotionStories.RevealOnScroll} />
+
+Important Notes:
+
+1. Where supported, the effect uses CSS scroll-driven animations, so it needs no
+   JavaScript and does not follow `--duration`.
+2. Other browsers, such as Firefox, fade the content in once when it scrolls
+   into view. This needs `RevealFallback` in the root layout.
+   Readers who prefer reduced motion see the content in place with no
+   animation.
+3. Content already in view when the page loads is not hidden.
+4. When animated components are nested, only the outermost one animates.
+
+### Reveal
+
+Import `Reveal` from `_Foundations/motion/Reveal` to give any other content the
+same entrance.
+
+<Canvas of={MotionStories.RevealWrapper} />
+
+## Parallax
+
+`Parallax` is a framed area whose content, usually an image, drifts slower than
+the page as it scrolls past. Set `speed` to `subtle`, `medium` or `strong`, and
+`ratio` to change the shape of the frame. Without support, or when the reader
+prefers reduced motion, the content stays still.
+
+<Canvas of={MotionStories.ParallaxSpeeds} />
+
+## Smooth scrolling
+
+`SmoothScroll` adds inertia to wheel and touch scrolling for the whole page. It
+renders nothing and is placed once near the top of the root layout. It does
+nothing when the reader prefers reduced motion, and links to an `#id` on the
+same page scroll smoothly to their target.
+
+<Canvas of={MotionStories.SmoothScrolling} />

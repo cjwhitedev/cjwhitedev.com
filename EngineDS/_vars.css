@@ -64,6 +64,9 @@
   --duration: 0.2s;
   --easing: ease-in-out;
 
+  --reveal-distance: var(--space-xl);
+  --reveal-duration: calc(var(--duration) * 3);
+
   --navbar-height: 3.75rem;
 }
 

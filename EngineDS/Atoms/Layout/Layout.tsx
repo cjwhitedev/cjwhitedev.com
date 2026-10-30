@@ -3,6 +3,7 @@ import {
   joinClasses,
   nonDefaultModifier,
 } from "@/EngineDS/_Foundations/classes";
+import { revealClass } from "@/EngineDS/_Foundations/motion/motion";
 import "./layout.css";
 
 export const LAYOUT_OPTIONS = [
@@ -75,17 +76,20 @@ export const Layout = ({
 export interface LayoutItemProps {
   children: React.ReactNode;
   columnStart?: "1" | "2" | "3" | "4";
+  animate?: boolean;
 }
 
 export const LayoutItem = ({
   children,
   columnStart = "1",
+  animate = true,
 }: LayoutItemProps) => {
   return (
     <div
       className={joinClasses(
         "engine-layout__item",
         `engine-layout__item--cs-${columnStart}`,
+        revealClass(animate),
       )}
     >
       {children}

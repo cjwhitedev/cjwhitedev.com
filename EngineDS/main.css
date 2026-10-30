@@ -3,6 +3,7 @@
 @import "./_vars.css" layer(tokens);
 @import "./_Foundations/themes.css" layer(tokens);
 @import "./_Foundations/typography.css" layer(base);
+@import "./_Foundations/motion/motion.css" layer(components);
 
 @layer base {
   html,
