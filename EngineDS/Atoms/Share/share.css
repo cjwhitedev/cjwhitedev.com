@@ -1,0 +1,47 @@
+@layer components {
+  .engine-share {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .engine-share--a-center {
+    justify-content: center;
+  }
+
+  .engine-share--a-end {
+    justify-content: end;
+  }
+
+  .engine-share__text {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: var(--text-md);
+    font-weight: var(--weight-semibold);
+  }
+
+  .engine-share__list {
+    display: flex;
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .engine-share__link {
+    display: flex;
+    font-size: var(--text-2xl);
+    line-height: 1;
+    text-decoration: none;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover svg {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .engine-share--s-small .engine-share__link {
+    font-size: var(--text-lg);
+  }
+}

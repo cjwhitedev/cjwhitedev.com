@@ -1,6 +1,16 @@
 @layer components {
+  .engine-footer__title {
+    font-size: var(--text-xl);
+  }
+
   .engine-footer__list {
     margin: 0;
-    padding-inline-start: var(--space-md);
+    padding: 0;
+    list-style: none;
+  }
+
+  .engine-footer__copyright {
+    margin: 0;
+    font-size: var(--text-xs);
   }
 }

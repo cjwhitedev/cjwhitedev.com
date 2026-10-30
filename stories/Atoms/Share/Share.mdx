@@ -1,0 +1,51 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+import * as ShareStories from "./Share.stories";
+
+<Meta of={ShareStories} name="Docs" />
+
+# Share
+
+A labelled list of icon links to social and contact destinations.
+
+<Controls />
+
+## Basic Share
+
+The default share shows a label above one icon link per source.
+
+<Canvas of={ShareStories.Default} />
+
+Important Notes:
+
+1. Each source needs a `name` and an `href`. The supported names are `github`, `linkedin` and `email`.
+2. Icons are hidden from assistive technology. Each link is named after its network, such as "GitHub", so no extra label is needed.
+3. Use a `mailto:` address as the `href` for the `email` source.
+4. Icon and label colors come from the current theme, so the share needs no theme property of its own.
+
+## Content Variants
+
+### Custom Text
+
+Set the `text` property to change the label.
+
+<Canvas of={ShareStories.CustomText} />
+
+## Visual Variants
+
+### Size
+
+Set `size` to `small` for a more compact set of icons. The default is `medium`.
+
+<Canvas of={ShareStories.Sizes} />
+
+### Alignment
+
+Set `align` to `center` or `end` to position the label and icons within the space available. The default is `start`.
+
+<Canvas of={ShareStories.Alignments} />
+
+### Themes
+
+The share follows the theme of the container it is placed in.
+
+<Canvas of={ShareStories.Themes} />
