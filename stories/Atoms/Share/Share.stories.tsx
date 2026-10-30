@@ -9,6 +9,11 @@ const meta = {
     layout: "fullscreen",
   },
   argTypes: {
+    animate: {
+      control: "boolean",
+      description: "Turns the reveal on scroll on or off.",
+      table: { defaultValue: { summary: "true" } },
+    },
     text: {
       control: "text",
       description: "The label displayed above the links.",

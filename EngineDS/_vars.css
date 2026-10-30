@@ -66,6 +66,11 @@
 
   --reveal-distance: var(--space-xl);
   --reveal-duration: calc(var(--duration) * 3);
+  --reveal-range: entry 0% entry 40%;
+
+  --parallax-subtle: var(--space-md);
+  --parallax-medium: var(--space-xl);
+  --parallax-strong: var(--space-2xl);
 
   --navbar-height: 3.75rem;
 }

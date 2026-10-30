@@ -9,6 +9,11 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    animate: {
+      control: "boolean",
+      description: "Turns the reveal on scroll on or off.",
+      table: { defaultValue: { summary: "true" } },
+    },
     hierarchy: {
       description:
         "Used to change the button's appearance based on importance.",

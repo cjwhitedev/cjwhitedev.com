@@ -6,6 +6,11 @@ const meta = {
   title: "Engine DS/Atoms/CodeBlock",
   component: CodeBlock,
   argTypes: {
+    animate: {
+      control: "boolean",
+      description: "Turns the reveal on scroll on or off.",
+      table: { defaultValue: { summary: "true" } },
+    },
     code: {
       description: "The main content to be displayed as a code snippet.",
     },

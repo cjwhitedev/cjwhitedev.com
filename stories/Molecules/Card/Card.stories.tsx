@@ -12,6 +12,11 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    animate: {
+      control: "boolean",
+      description: "Turns the reveal on scroll on or off.",
+      table: { defaultValue: { summary: "true" } },
+    },
     children: {
       control: "text",
       description: "The content to be displayed below the image.",

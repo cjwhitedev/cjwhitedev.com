@@ -1,7 +1,7 @@
 @keyframes engine-reveal {
   from {
     opacity: 0;
-    translate: 0 var(--space-xl);
+    translate: 0 var(--reveal-distance);
   }
 
   to {
@@ -16,7 +16,7 @@
     .engine-reveal {
       animation: engine-reveal linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 40%;
+      animation-range: var(--reveal-range);
     }
 
     /* Only the outermost element animates */
@@ -31,10 +31,10 @@
   @media (prefers-reduced-motion: no-preference) {
     .engine-reveal-js .engine-reveal {
       opacity: 0;
-      translate: 0 var(--space-xl);
+      translate: 0 var(--reveal-distance);
       transition:
-        opacity calc(var(--duration) * 3) var(--easing),
-        translate calc(var(--duration) * 3) var(--easing);
+        opacity var(--reveal-duration) var(--easing),
+        translate var(--reveal-duration) var(--easing);
     }
 
     .engine-reveal-js .engine-reveal--visible,

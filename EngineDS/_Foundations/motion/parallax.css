@@ -10,7 +10,7 @@
   }
 
   .engine-parallax {
-    --parallax-distance: var(--space-xl);
+    --parallax-distance: var(--parallax-medium);
 
     position: relative;
     overflow: hidden;
@@ -19,11 +19,11 @@
   }
 
   .engine-parallax--s-subtle {
-    --parallax-distance: var(--space-md);
+    --parallax-distance: var(--parallax-subtle);
   }
 
   .engine-parallax--s-strong {
-    --parallax-distance: var(--space-2xl);
+    --parallax-distance: var(--parallax-strong);
   }
 
   /* Oversized so the layer never uncovers the container while it moves */

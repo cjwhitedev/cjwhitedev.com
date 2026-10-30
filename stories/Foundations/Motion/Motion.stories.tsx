@@ -7,7 +7,9 @@ import { SmoothScroll } from "@/EngineDS/_Foundations/motion/SmoothScroll";
 import { TokenTable, tokensMatching } from "@/stories/Foundations/tokens";
 
 const Motion = () => (
-  <TokenTable tokens={tokensMatching("duration|easing|focus-offset")} />
+  <TokenTable
+    tokens={tokensMatching("duration|easing|focus-offset|reveal|parallax")}
+  />
 );
 
 const meta = {
