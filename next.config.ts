@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  images: { unoptimized: true },
   turbopack: {
     rules: {
       "*.svg": {
