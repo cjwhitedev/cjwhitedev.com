@@ -1,6 +1,7 @@
 @layer components {
   .engine-card {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     outline: var(--stroke) solid var(--bg);
@@ -22,6 +23,10 @@
 
   .engine-card__content {
     padding: var(--space-md);
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   .engine-card--linked {

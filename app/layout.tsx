@@ -12,6 +12,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cjwhitedev.com"),
   title: "CJ White",
   description: "Web Developer",
 };

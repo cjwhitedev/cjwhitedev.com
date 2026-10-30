@@ -5,7 +5,7 @@
     cursor: pointer;
     border: 0;
     border-radius: var(--radius);
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-sm) var(--space-md);
     text-transform: uppercase;
     font-weight: var(--weight-black);
     font-size: var(--text-md);
@@ -23,13 +23,13 @@
   }
 
   .engine-button--small {
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-xs) var(--space-sm);
     font-size: var(--text-xs);
   }
 
   .engine-button--large {
-    padding: var(--space-lg) var(--space-2xl);
-    font-size: var(--text-xl);
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--text-lg);
   }
 
   .engine-button--secondary {

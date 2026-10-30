@@ -3,6 +3,7 @@ import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
 import { Share, type ShareProps } from "@/EngineDS/Atoms/Share/Share";
 import { joinClasses } from "@/EngineDS/_Foundations/classes";
 import { themeClass, type EngineTheme } from "@/EngineDS/_Foundations/themes";
+import { CopyrightYear } from "./CopyrightYear";
 import "./footer.css";
 
 export type FooterProps = {
@@ -47,7 +48,7 @@ export const Footer = ({
       {copyright && (
         <Layout theme="inherit" padding="small">
           <p className="engine-footer__copyright">
-            © {new Date().getFullYear()} {copyright}
+            © <CopyrightYear /> {copyright}
           </p>
         </Layout>
       )}
