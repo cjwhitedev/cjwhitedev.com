@@ -28,7 +28,11 @@ export const Footer = ({
         <LayoutItem>
           <h2 className="engine-footer__title">{title}</h2>
           {children}
-          {share && <Share {...share} />}
+          {share && (
+            <div className="engine-footer__share">
+              <Share {...share} />
+            </div>
+          )}
         </LayoutItem>
         <LayoutItem>
           <ul className="engine-footer__list">

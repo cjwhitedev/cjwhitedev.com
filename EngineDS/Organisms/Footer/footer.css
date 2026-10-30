@@ -3,6 +3,10 @@
     font-size: var(--text-xl);
   }
 
+  .engine-footer__share {
+    margin-block-start: var(--space-md);
+  }
+
   .engine-footer__list {
     margin: 0;
     padding: 0;
