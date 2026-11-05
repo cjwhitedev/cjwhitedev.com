@@ -17,6 +17,17 @@
   --primary: var(--purple);
   --secondary: var(--orange);
 
+  /* new palette */
+  --dark-violet: #131014;
+  --rich-violet: #332549;
+  --discrete-amethyst: #553e7a;
+  --electric-coral: #a83135;
+  --bright-terracotta: #e9a954;
+  --discrete-mint: #aac185;
+  --luminous-amber: #f6e1c3;
+  --pale-peach: #fbf0e1;
+  --soft-graphite: #f7f7f7;
+
   --max-width: 55rem;
 
   --font-heading: var(--font-open-sans, "Trebuchet MS", sans-serif);
