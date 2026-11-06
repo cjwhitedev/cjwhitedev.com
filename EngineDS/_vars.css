@@ -1,23 +1,5 @@
 :root {
-  /* colors */
-  --beige: #f6e1c3;
-  --orange: #e9a178;
-  --maroon: #a84448;
-  --purple: #7a3e65;
-
-  --near-black: color-mix(in srgb, var(--purple) 40%, black);
-  --near-white: color-mix(in srgb, var(--beige) 50%, white);
-  --white: #fff;
-  --dark-purple: color-mix(in srgb, var(--purple) 60%, black);
-  --plum: color-mix(in srgb, var(--purple) 80%, black);
-
-  --bg: var(--white);
-  --fg: var(--near-black);
-
-  --primary: var(--purple);
-  --secondary: var(--orange);
-
-  /* new palette */
+  /* color palette */
   --dark-violet: #131014;
   --rich-violet: #332549;
   --discrete-amethyst: #553e7a;
@@ -27,6 +9,17 @@
   --luminous-amber: #f6e1c3;
   --pale-peach: #fbf0e1;
   --soft-graphite: #f7f7f7;
+
+  --near-black: var(--dark-violet);
+  --near-white: var(--pale-peach);
+  --white: var(--soft-graphite);
+  --dark-purple: var(--rich-violet);
+
+  --bg: var(--white);
+  --fg: var(--near-black);
+
+  --primary: var(--discrete-amethyst);
+  --secondary: var(--bright-terracotta);
 
   --max-width: 55rem;
 

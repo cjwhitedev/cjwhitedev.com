@@ -72,7 +72,7 @@ export const LayoutThirds: Story = {
   },
 };
 
-const themes = ["white", "light", "dark", "dark-alt", "dark-plum"] as const;
+const themes = ["white", "light", "dark", "dark-sec", "dark-ter"] as const;
 
 export const Themes: Story = {
   args: {

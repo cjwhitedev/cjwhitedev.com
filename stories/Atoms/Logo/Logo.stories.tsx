@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 const colors = ["inherit", "primary", "secondary"] as const;
-const themes = ["white", "dark-alt"] as const;
+const themes = ["white", "dark-sec"] as const;
 
 export const ColorOptions: Story = {
   parameters: { layout: "fullscreen" },

@@ -5,14 +5,14 @@ import { Swatches, tokensMatching } from "@/stories/Foundations/tokens";
 import { MIN_BODY, MIN_TEXT, tokenContrast } from "./contrast";
 
 const palette = tokensMatching(
-  "(?:beige|orange|maroon|purple|near-black|near-white|white|dark-purple|plum)",
+  "(?:dark-violet|rich-violet|discrete-amethyst|electric-coral|bright-terracotta|discrete-mint|luminous-amber|pale-peach|soft-graphite)",
 );
 
 const roles = ["--fg", "--bg", "--primary", "--secondary"].map((name) => ({
   name,
 }));
 
-const themes = ["white", "light", "dark", "dark-alt", "dark-plum"] as const;
+const themes = ["white", "light", "dark", "dark-sec", "dark-ter"] as const;
 
 const format = (ratio: number) => `${ratio.toFixed(2)}:1`;
 
@@ -102,7 +102,7 @@ export const DarkMode: Story = {
     const background = async (theme: string) =>
       getComputedStyle(await canvas.findByTestId(`panel-${theme}`))
         .backgroundColor;
-    await expect(await background("white")).toBe(await background("dark-alt"));
-    await expect(await background("light")).toBe(await background("dark-plum"));
+    await expect(await background("white")).toBe(await background("dark-sec"));
+    await expect(await background("light")).toBe(await background("dark-ter"));
   },
 };

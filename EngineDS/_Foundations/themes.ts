@@ -1,5 +1,5 @@
-// white and light alternate on pages; dark-alt and dark-plum replace them in dark mode
-export type EngineTheme = "white" | "light" | "dark" | "dark-alt" | "dark-plum";
+// white and light alternate on pages; dark-sec and dark-ter replace them in dark mode
+export type EngineTheme = "white" | "light" | "dark" | "dark-sec" | "dark-ter";
 
 // inherit adds no class; contrast picks the dark theme furthest from the parent
 export type RelativeTheme = "inherit" | "contrast";

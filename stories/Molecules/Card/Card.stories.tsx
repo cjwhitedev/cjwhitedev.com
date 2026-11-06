@@ -101,7 +101,7 @@ export const UseCaseLayoutThirds = {
   ),
 };
 
-const cardThemes = ["white", "light", "dark", "dark-alt", "dark-plum"] as const;
+const cardThemes = ["white", "light", "dark", "dark-sec", "dark-ter"] as const;
 
 const cardBody = (
   <>

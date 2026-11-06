@@ -1,12 +1,12 @@
 .engine--t-white,
 .engine--t-light {
   --fg: var(--near-black);
-  --primary: var(--purple);
-  --secondary: var(--orange);
+  --primary: var(--discrete-amethyst);
+  --secondary: var(--bright-terracotta);
   --contrast-fg: var(--near-white);
-  --contrast-bg: var(--dark-purple);
-  --contrast-primary: var(--orange);
-  --contrast-secondary: var(--purple);
+  --contrast-bg: var(--rich-violet);
+  --contrast-primary: var(--bright-terracotta);
+  --contrast-secondary: var(--discrete-amethyst);
 
   background-color: var(--bg);
   color: var(--fg);
@@ -21,14 +21,14 @@
 }
 
 .engine--t-dark,
-.engine--t-dark-alt,
-.engine--t-dark-plum {
+.engine--t-dark-sec,
+.engine--t-dark-ter {
   --fg: var(--near-white);
-  --primary: var(--orange);
-  --secondary: var(--purple);
+  --primary: var(--bright-terracotta);
+  --secondary: var(--discrete-amethyst);
   --contrast-fg: var(--near-white);
-  --contrast-primary: var(--orange);
-  --contrast-secondary: var(--purple);
+  --contrast-primary: var(--bright-terracotta);
+  --contrast-secondary: var(--discrete-amethyst);
 
   background-color: var(--bg);
   color: var(--fg);
@@ -36,16 +36,17 @@
 
 .engine--t-dark {
   --bg: var(--near-black);
-  --contrast-bg: var(--plum);
+  --contrast-bg: var(--discrete-amethyst);
 }
 
-.engine--t-dark-alt {
-  --bg: var(--dark-purple);
+.engine--t-dark-sec {
+  --bg: var(--rich-violet);
   --contrast-bg: var(--near-black);
 }
 
-.engine--t-dark-plum {
-  --bg: var(--plum);
+.engine--t-dark-ter {
+  --bg: var(--discrete-amethyst);
+  --secondary: var(--discrete-mint);
   --contrast-bg: var(--near-black);
 }
 
@@ -59,27 +60,27 @@
   color: var(--fg);
 }
 
-/* Dark mode: white becomes dark-alt and light becomes dark-plum; dark themes stay put */
+/* Dark mode: white becomes dark-sec and light becomes dark-ter; dark themes stay put */
 .engine--mode-dark,
 .engine--mode-dark .engine--t-white,
 .engine--mode-dark .engine--t-light {
   color-scheme: dark;
   --fg: var(--near-white);
-  --primary: var(--orange);
-  --secondary: var(--purple);
+  --primary: var(--bright-terracotta);
+  --secondary: var(--discrete-amethyst);
   --contrast-fg: var(--near-white);
   --contrast-bg: var(--near-black);
-  --contrast-primary: var(--orange);
-  --contrast-secondary: var(--purple);
+  --contrast-primary: var(--bright-terracotta);
+  --contrast-secondary: var(--discrete-amethyst);
 }
 
 .engine--mode-dark,
 .engine--mode-dark .engine--t-white {
-  --bg: var(--dark-purple);
+  --bg: var(--rich-violet);
 }
 
 .engine--mode-dark .engine--t-light {
-  --bg: var(--plum);
+  --bg: var(--discrete-amethyst);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,20 +89,20 @@
   :root:not(.engine--mode-light) .engine--t-light {
     color-scheme: dark;
     --fg: var(--near-white);
-    --primary: var(--orange);
-    --secondary: var(--purple);
+    --primary: var(--bright-terracotta);
+    --secondary: var(--discrete-amethyst);
     --contrast-fg: var(--near-white);
     --contrast-bg: var(--near-black);
-    --contrast-primary: var(--orange);
-    --contrast-secondary: var(--purple);
+    --contrast-primary: var(--bright-terracotta);
+    --contrast-secondary: var(--discrete-amethyst);
   }
 
   :root:not(.engine--mode-light),
   :root:not(.engine--mode-light) .engine--t-white {
-    --bg: var(--dark-purple);
+    --bg: var(--rich-violet);
   }
 
   :root:not(.engine--mode-light) .engine--t-light {
-    --bg: var(--plum);
+    --bg: var(--discrete-amethyst);
   }
 }

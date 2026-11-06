@@ -12,7 +12,7 @@ export interface NavbarProps {
   title?: string;
 }
 
-export const Navbar = ({ links, theme = "dark-alt", title }: NavbarProps) => {
+export const Navbar = ({ links, theme = "dark-sec", title }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
 

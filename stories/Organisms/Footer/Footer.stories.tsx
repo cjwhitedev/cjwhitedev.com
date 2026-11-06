@@ -73,6 +73,6 @@ export const WithShare: Story = {
 export const Theme: Story = {
   args: {
     ...WithShare.args,
-    theme: "dark-plum",
+    theme: "dark-ter",
   },
 };

@@ -1,6 +1,7 @@
 @layer components {
   .engine-header {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: var(--z-header);
     height: var(--header-height);
     --header-height: calc(var(--navbar-height) + var(--space-md));

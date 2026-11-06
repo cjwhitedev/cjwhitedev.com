@@ -5,7 +5,7 @@ import * as ColorsStories from "./Colors.stories";
 
 # Colors
 
-Four brand colors make up the palette. Themes map them to roles, so components
+Several brand colors make up the palette. Themes map them to roles, so components
 use `--bg`, `--fg`, `--primary` and `--secondary` rather than palette names.
 
 ## Themes
@@ -13,14 +13,14 @@ use `--bg`, `--fg`, `--primary` and `--secondary` rather than palette names.
 - `white`: default, for page sections.
 - `light`: alternate with `white` to separate sections.
 - `dark`: header and footer. Stays the same in dark mode.
-- `dark-alt`: occasional contrast on light pages. Replaces `white` in dark mode.
-- `dark-plum`: replaces `light` in dark mode.
+- `dark-sec`: occasional contrast on light pages. Replaces `white` in dark mode.
+- `dark-ter`: replaces `light` in dark mode.
 
 Layout and Navbar also accept `inherit`, which adds no theme and uses the
 surrounding one. Header and Footer set their own theme and pass `inherit` down
 to their Layout and Navbar. Card defaults to `contrast`, which
-picks the dark theme furthest from its parent: `dark-alt` on `white` and `light`,
-`dark` on `dark-alt` and `dark-plum`, and `dark-plum` on `dark`.
+picks the dark theme furthest from its parent: `dark-sec` on `white` and `light`,
+`dark` on `dark-sec` and `dark-ter`, and `dark-ter` on `dark`.
 
 ## Accessibility
 
@@ -33,8 +33,8 @@ component story is also checked by axe in each theme.
 
 ## Dark mode
 
-When the visitor prefers a dark color scheme, `white` becomes `dark-alt` and
-`light` becomes `dark-plum`. Themes that are already dark do not change, and
+When the visitor prefers a dark color scheme, `white` becomes `dark-sec` and
+`light` becomes `dark-ter`. Themes that are already dark do not change, and
 neither do themes set by hand, so a header stays `dark`. The Storybook theme
 toggle applies the same swap through an `engine--mode-dark` class on the page,
 and `engine--mode-light` forces light regardless of the system setting. The

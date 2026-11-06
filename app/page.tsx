@@ -119,7 +119,10 @@ const Home = () => {
 
         <Layout layout="halves-from-small" gap="large" padding="large">
           <LayoutItem>
-            <h2>Selected work: Bolt Design System</h2>
+            <h2>
+              Selected work: <br />
+              Bolt Design System
+            </h2>
             <p>
               Bolt is the design system behind pega.com. I owned most of the
               documentation for its roughly 64 components, in both the Twig and
