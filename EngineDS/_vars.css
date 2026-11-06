@@ -21,7 +21,7 @@
   --primary: var(--discrete-amethyst);
   --secondary: var(--bright-terracotta);
 
-  --max-width: 55rem;
+  --max-width: 880px;
 
   --font-heading: var(--font-open-sans, "Trebuchet MS", sans-serif);
   --font-body: var(

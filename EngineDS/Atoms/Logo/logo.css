@@ -1,7 +1,7 @@
 @layer components {
   .engine-logo {
     display: block;
-    width: 195px;
+    width: 12.5rem;
     height: auto;
     color: inherit;
   }

@@ -20,10 +20,10 @@
 
   .engine-navbar__toggle {
     display: grid;
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
     place-content: center center;
-    --toggle-gap: 5px;
+    --toggle-gap: 0.3125rem;
 
     gap: var(--toggle-gap);
     padding: 0;
@@ -52,7 +52,7 @@
 
   .engine-navbar__toggle-bar {
     display: block;
-    width: 22px;
+    width: 1.375rem;
     height: var(--stroke);
     background-color: currentcolor;
     transition:
