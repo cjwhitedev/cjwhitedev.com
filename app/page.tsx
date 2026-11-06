@@ -43,27 +43,6 @@ const links = (suffix: string) => [
   { id: `linkedin-${suffix}`, children: "LinkedIn", href: LINKEDIN },
 ];
 
-const caseStudyCards = [
-  {
-    title: "Foundations",
-    text: "Color, type, spacing, shape, motion and breakpoints, documented straight from the CSS that defines them.",
-    href: `${STORYBOOK}/?path=/docs/engine-ds-foundations-colors--docs`,
-    linkLabel: "View the Foundations docs in Storybook",
-  },
-  {
-    title: "Components",
-    text: "Atoms, molecules and organisms built on one Layout, with themes that any container can pass down.",
-    href: `${STORYBOOK}/?path=/docs/engine-ds-atoms-layout--docs`,
-    linkLabel: "View the Layout docs in Storybook",
-  },
-  {
-    title: "Documentation",
-    text: "Each component is documented in the style of the Bolt Design System: a short description, controls, numbered notes and variants.",
-    href: `${STORYBOOK}/?path=/docs/engine-ds-organisms-footer--docs`,
-    linkLabel: "View the Footer docs in Storybook",
-  },
-];
-
 const footerExample = `<Footer
   title="CJ White"
   links={links}
@@ -74,7 +53,7 @@ const footerExample = `<Footer
 const decisions = [
   {
     title: "A flat design language",
-    text: "Solid colors, a 3px stroke and a single radius. There are no gradients or shadows anywhere in the system.",
+    text: 'Solid colors and thick strokes. The primary descriptors I would use are "bold" and "chunky".',
   },
   {
     title: "Docs generated from the CSS",
@@ -86,61 +65,7 @@ const decisions = [
   },
   {
     title: "A theme system",
-    text: "White, light, dark, dark-alt and dark-plum themes, plus a contrast theme that picks the dark theme furthest from its surroundings. Dark mode follows the visitor's system setting.",
-  },
-];
-
-const roles = [
-  {
-    title: "Principal Web Developer, Front End",
-    place: "Pegasystems | Remote | 2020–2026",
-    note: "Promoted from Senior Web Developer, Front End, in the fall of 2025.",
-    points: [
-      "Built and maintained the design system behind pega.com and several related Pega-branded sites, working with about two dozen colleagues across teams and roles.",
-      "Owned documentation for a roughly 64-component design system in both its Twig and React versions, writing most of it and setting the standards others followed. Back-end developers, the primary users, credited it with improving their workflow.",
-      "Reviewed pull requests, holding contributions to the system's accessibility, documentation and code standards.",
-      "Led front-end development on a full-scale rebrand of a customer-facing website with a small team on a tight turnaround, working directly with the creative team and flagging colors and type that fell short of WCAG.",
-      "Helped move the system from Twig and Web Components to React, relieving tech debt and aligning its stack with the back-end team's workflow. Also built the front-end chat interface for an AI learning agent on Pega Academy in React.",
-      "Worked within the company's AI-assisted development standard to draft documentation and build page-level frames, reviewing all output and consolidating repetition into reusable patterns.",
-    ],
-  },
-  {
-    title: "Lead UX Engineer",
-    place: "Imarc | Amesbury, MA | 2018–2020",
-    points: [
-      "Led development of new sites and maintained existing ones, building flexible Craft CMS tools that gave clients control over their content while keeping functionality reusable.",
-      'Improved Imarc\'s Webpack and component-based project launchpad, "Boilerplate."',
-    ],
-  },
-  {
-    title: "UI Developer",
-    place: "Genuine | Boston, MA | 2016–2018",
-    points: [
-      "Built responsive, component-driven layouts for multiple CMSs, primarily Drupal, and refactored legacy code to streamline work for junior developers.",
-      "Helped the core team define accessibility and performance best practices.",
-    ],
-  },
-  {
-    title: "Jr. Developer",
-    place: "Axion Media Lab | Pawtucket, RI | 2015–2016",
-    points: [
-      "Built custom responsive WordPress themes and tested HTML email templates across email clients.",
-    ],
-  },
-];
-
-const skills = [
-  {
-    title: "Development",
-    text: "React, TypeScript, Next.js, JavaScript (ESNext), HTML5, CSS Preprocessors, Web Components, Twig, Templating, CMS (Craft, Drupal, WordPress)",
-  },
-  {
-    title: "Design Systems & Process",
-    text: "Component Libraries, Documentation, Code Review, Accessibility (WCAG AA/AAA), Performance, Agile, Version Control",
-  },
-  {
-    title: "Tools & Workflow",
-    text: "Webpack, NPM / Yarn, Jest, VS Code, GitHub Copilot",
+    text: "Several theme options, plus a contrast theme that picks the dark theme furthest from its surroundings. Dark mode follows the visitor's system setting.",
   },
 ];
 
@@ -149,21 +74,27 @@ const Home = () => {
     <>
       <Header links={links("header")} />
       <main>
-        <Layout padding="large">
+        <Layout theme="light" padding="large" paddingBottom="none">
           <LayoutItem>
-            <h1>CJ White</h1>
+            <h1 style={{ marginBottom: "0" }}>CJ White</h1>
             <h2>Principal Frontend Developer</h2>
-            <p>
+            <h6 style={{ marginBottom: "1rem" }}>
               Open to principal-level roles, remote or hybrid in the greater
               Boston area.
-            </p>
+            </h6>
           </LayoutItem>
         </Layout>
 
-        <Layout layout="halves-from-small" gap="large" padding="large">
+        <Layout
+          theme="light"
+          layout="halves-from-small"
+          gap="large"
+          padding="large"
+          paddingTop="none"
+        >
           <LayoutItem>
             <p>
-              Principal-level front-end developer with 10+ years of experience
+              Principal-level front-end developer with 15+ years of experience
               building accessible, component-driven websites. Spent six years on
               the design system behind pega.com, owning its documentation across
               Twig and React versions, reviewing contributions from teams across
@@ -186,19 +117,13 @@ const Home = () => {
           </LayoutItem>
         </Layout>
 
-        <Layout
-          theme="light"
-          layout="halves-from-small"
-          gap="large"
-          padding="large"
-        >
+        <Layout layout="halves-from-small" gap="large" padding="large">
           <LayoutItem>
             <h2>Selected work: Bolt Design System</h2>
             <p>
-              Bolt is the public documentation for the design system behind
-              pega.com. I wrote most of the documentation for its roughly 64
-              components, in both the Twig and React versions, and set the
-              standards other contributors followed.
+              Bolt is the design system behind pega.com. I owned most of the
+              documentation for its roughly 64 components, in both the Twig and
+              React versions, and set the standards other contributors followed.
             </p>
             <Button label="Visit Bolt" href={BOLT} />
           </LayoutItem>
@@ -221,22 +146,21 @@ const Home = () => {
         </Layout>
 
         <Layout
-          theme="dark"
+          theme="light"
           layout="halves-from-small"
           gap="large"
           padding="large"
+          paddingBottom="none"
         >
           <LayoutItem>
             <h2>Case study: EngineDS</h2>
             <p>
-              EngineDS is the design system behind this page. I built it as a
-              project that demonstrates what I know, and the second benefit is
-              that I use it to build this page.
+              EngineDS is the design system behind this page, and is a portfolio
+              pieces of its own.
             </p>
             <p>
               Its documentation follows what I learned on Bolt. Each page opens
-              with a short description and controls, then numbered notes and
-              variants for anyone using the component.
+              with a short description and controls.
             </p>
             <Button label="Visit Storybook" href={STORYBOOK} />
           </LayoutItem>
@@ -253,25 +177,21 @@ const Home = () => {
                 and Prettier on every commit.
               </li>
             </ul>
-            <h3>What is next</h3>
-            <p>
-              Form controls, an error color, disclosure, overlays, navigation
-              and content and table components.
-            </p>
           </LayoutItem>
         </Layout>
 
-        <Layout theme="dark" padding="small">
+        <Layout theme="light" padding="large" paddingBottom="none">
           <LayoutItem>
             <h3>Design decisions</h3>
           </LayoutItem>
         </Layout>
 
         <Layout
-          theme="dark"
+          theme="light"
           layout="halves-from-small"
           gap="large"
           padding="large"
+          paddingTop="none"
         >
           {decisions.map(({ title, text }) => (
             <LayoutItem key={title}>
@@ -279,90 +199,6 @@ const Home = () => {
               <p>{text}</p>
             </LayoutItem>
           ))}
-        </Layout>
-
-        <Layout
-          theme="light"
-          layout="halves-from-small"
-          gap="large"
-          padding="large"
-        >
-          <LayoutItem>
-            <h3>Using a component</h3>
-            <p>
-              The Footer at the bottom of this page is built from this
-              description, with the Share component inside it.
-            </p>
-          </LayoutItem>
-          <LayoutItem>
-            <CodeBlock code={footerExample} />
-          </LayoutItem>
-        </Layout>
-
-        <Layout
-          theme="dark"
-          layout="thirds-from-small"
-          gap="large"
-          padding="large"
-        >
-          {caseStudyCards.map(({ title, text, href, linkLabel }) => (
-            <LayoutItem key={title}>
-              <Card
-                teasersrc="/media/placeholder.jpg"
-                teaseralt=""
-                href={href}
-                linkLabel={linkLabel}
-              >
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </Card>
-            </LayoutItem>
-          ))}
-        </Layout>
-
-        <Layout padding="large">
-          <LayoutItem>
-            <h2>Experience</h2>
-          </LayoutItem>
-          {roles.map(({ title, place, note, points }) => (
-            <LayoutItem key={title}>
-              <h3>{title}</h3>
-              <p>
-                {place}
-                {note && <> | {note}</>}
-              </p>
-              <ul>
-                {points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </LayoutItem>
-          ))}
-        </Layout>
-
-        <Layout
-          theme="light"
-          layout="thirds-from-small"
-          gap="large"
-          padding="large"
-        >
-          {skills.map(({ title, text }) => (
-            <LayoutItem key={title}>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </LayoutItem>
-          ))}
-        </Layout>
-
-        <Layout padding="large">
-          <LayoutItem>
-            <h2>Education</h2>
-            <p>
-              Salem State University, Salem, MA | 2010–2015. Bachelor of Arts,
-              concentrations in Interactive Multimedia and Graphic Design; Minor
-              in Computer Science.
-            </p>
-          </LayoutItem>
         </Layout>
       </main>
       <Footer
