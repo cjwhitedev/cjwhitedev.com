@@ -37,6 +37,7 @@
 .engine--t-dark {
   --bg: var(--near-black);
   --contrast-bg: var(--discrete-amethyst);
+  --contrast-primary: var(--luminous-amber);
 }
 
 .engine--t-dark-sec {
@@ -46,6 +47,7 @@
 
 .engine--t-dark-ter {
   --bg: var(--discrete-amethyst);
+  --primary: var(--luminous-amber);
   --secondary: var(--discrete-mint);
   --contrast-bg: var(--near-black);
 }
@@ -81,6 +83,8 @@
 
 .engine--mode-dark .engine--t-light {
   --bg: var(--discrete-amethyst);
+  --primary: var(--luminous-amber);
+  --secondary: var(--discrete-mint);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,5 +108,7 @@
 
   :root:not(.engine--mode-light) .engine--t-light {
     --bg: var(--discrete-amethyst);
+    --primary: var(--luminous-amber);
+    --secondary: var(--discrete-mint);
   }
 }

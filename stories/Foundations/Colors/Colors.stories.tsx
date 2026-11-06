@@ -58,8 +58,8 @@ const ThemePanel = ({ theme }: { theme: (typeof themes)[number] }) => {
   );
 };
 
-const Colors = () => (
-  <>
+const Colors = ({ mode }: { mode?: "dark" }) => (
+  <div className={mode && `engine--mode-${mode}`}>
     <h2>Palette</h2>
     <Swatches tokens={palette} />
     <h2>Themes</h2>
@@ -68,7 +68,7 @@ const Colors = () => (
         <ThemePanel key={theme} theme={theme} />
       ))}
     </div>
-  </>
+  </div>
 );
 
 const meta = {
@@ -92,17 +92,23 @@ const expectReadable = async (canvasElement: HTMLElement) => {
 
 export const Default: Story = {
   // Fails if any theme drops below WCAG AA for links or AAA for body text
+  globals: { theme: "light" },
   play: ({ canvasElement }) => expectReadable(canvasElement).then(() => {}),
 };
 
 export const DarkMode: Story = {
-  globals: { theme: "dark" },
+  args: { mode: "dark" },
   play: async ({ canvasElement }) => {
     const canvas = await expectReadable(canvasElement);
-    const background = async (theme: string) =>
-      getComputedStyle(await canvas.findByTestId(`panel-${theme}`))
-        .backgroundColor;
-    await expect(await background("white")).toBe(await background("dark-sec"));
-    await expect(await background("light")).toBe(await background("dark-ter"));
+    const resolved = async (theme: string) => {
+      const style = getComputedStyle(
+        await canvas.findByTestId(`panel-${theme}`),
+      );
+      return ["--fg", "--bg", "--primary", "--secondary"].map((token) =>
+        style.getPropertyValue(token).trim().toLowerCase(),
+      );
+    };
+    await expect(await resolved("white")).toEqual(await resolved("dark-sec"));
+    await expect(await resolved("light")).toEqual(await resolved("dark-ter"));
   },
 };

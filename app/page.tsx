@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Anchor } from "@/EngineDS/Atoms/Anchor/Anchor";
 import { Button } from "@/EngineDS/Atoms/Button/Button";
-import { CodeBlock } from "@/EngineDS/Atoms/CodeBlock/CodeBlock";
 import { Layout, LayoutItem } from "@/EngineDS/Atoms/Layout/Layout";
-import { Card } from "@/EngineDS/Molecules/Card/Card";
 import { Footer } from "@/EngineDS/Organisms/Footer/Footer";
 import { Header } from "@/EngineDS/Organisms/Header/Header";
 
@@ -42,13 +40,6 @@ const links = (suffix: string) => [
   { id: `github-${suffix}`, children: "GitHub", href: GITHUB },
   { id: `linkedin-${suffix}`, children: "LinkedIn", href: LINKEDIN },
 ];
-
-const footerExample = `<Footer
-  title="CJ White"
-  links={links}
-  share={{ sources: shareSources }}
-  copyright="CJ White"
-/>`;
 
 const decisions = [
   {
