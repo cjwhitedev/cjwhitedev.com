@@ -26,6 +26,8 @@ export interface LayoutProps {
   theme?: EngineTheme | "inherit";
   gap?: "none" | "small" | "medium" | "large";
   padding?: "none" | "small" | "medium" | "large";
+  paddingTop?: "inherit" | "none";
+  paddingBottom?: "inherit" | "none";
   align?: "start" | "center" | "end";
   valign?: "start" | "center" | "end";
 }
@@ -35,6 +37,8 @@ const DEFAULTS = {
   theme: "white",
   gap: "medium",
   padding: "medium",
+  paddingTop: "inherit",
+  paddingBottom: "inherit",
   align: "start",
   valign: "start",
 } as const;
@@ -45,6 +49,8 @@ export const Layout = ({
   theme = DEFAULTS.theme,
   gap = DEFAULTS.gap,
   padding = DEFAULTS.padding,
+  paddingTop = DEFAULTS.paddingTop,
+  paddingBottom = DEFAULTS.paddingBottom,
   align = DEFAULTS.align,
   valign = DEFAULTS.valign,
 }: LayoutProps) => {
@@ -59,6 +65,12 @@ export const Layout = ({
     "engine-layout",
     nonDefaultModifier("engine-layout--g-", gap, DEFAULTS.gap),
     nonDefaultModifier("engine-layout--p-", padding, DEFAULTS.padding),
+    nonDefaultModifier("engine-layout--pt-", paddingTop, DEFAULTS.paddingTop),
+    nonDefaultModifier(
+      "engine-layout--pb-",
+      paddingBottom,
+      DEFAULTS.paddingBottom,
+    ),
     nonDefaultModifier("engine-layout--a-", align, DEFAULTS.align),
     nonDefaultModifier("engine-layout--v-", valign, DEFAULTS.valign),
     ...layouts.map((l) =>

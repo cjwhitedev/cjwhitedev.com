@@ -21,10 +21,12 @@
 
   .engine-layout--g-small {
     gap: var(--space-xs);
+    row-gap: 0;
   }
 
   .engine-layout--g-large {
     gap: var(--space-2xl);
+    row-gap: 0;
   }
 
   .engine-layout--p-none {
@@ -37,6 +39,14 @@
 
   .engine-layout--p-large {
     padding: var(--space-2xl) 0;
+  }
+
+  .engine-layout--pt-none {
+    padding-top: 0;
+  }
+
+  .engine-layout--pb-none {
+    padding-bottom: 0;
   }
 
   .engine-layout--l-halves {
